@@ -117,9 +117,12 @@ void Arena::createArena() {
 	*/
 
 	// *WARNING* Some of these overlap / stretch across other rows
+	
+	
+	// Pillar
 	// First row | y = 217
 	rectangles.push_back(new Rectangle(50, 177, 435, 145, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(50, 177, 435, 698, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(50, 182, 435, 693, 0, 0, 255, 255));
 	
 
 	// Second row | y =
@@ -131,19 +134,19 @@ void Arena::createArena() {
 	// Third row | y = 398 (End 492 )
 
 	rectangles.push_back(new Rectangle(116, 50, 131, 398, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(30, 94, 283, 398, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(30, 76, 283, 398, 0, 0, 255, 255));
 	rectangles.push_back(new Rectangle(222, 30, 350, 398, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(30, 94, 607, 398, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(30, 76, 607, 398, 0, 0, 255, 255));
 	rectangles.push_back(new Rectangle(116, 50, 673, 398, 0, 0, 255, 255));
 
 	// Fourth row | y = 528 (And 592, END 622) 
 
 	rectangles.push_back(new Rectangle(116, 50, 131, 572, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(30, 94, 283, 528, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(30, 76, 283, 546, 0, 0, 255, 255));
 
 	rectangles.push_back(new Rectangle(222, 30, 350, 592, 0, 0, 255, 255)); //Middle bar has different height (30 pixels up from vertical bar end)
 
-	rectangles.push_back(new Rectangle(30, 94, 607, 528, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(30, 76, 607, 546, 0, 0, 255, 255));
 	rectangles.push_back(new Rectangle(116, 50, 673, 572, 0, 0, 255, 255));
 																			// Collider can't handle scenario (Check later)
 	/*rectangles.push_back(new Rectangle(116, 10, 131, 504, 0, 0, 255, 255));
