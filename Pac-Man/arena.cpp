@@ -5,14 +5,162 @@ void Arena::createArena() {
 
 	//36 space between walls for objects to pass through
 
-	//outer walls
-	rectangles.push_back(new Rectangle(810, 20, 20, 250, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(810, 20, 20, 830, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(20, 600, 0, 250, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(20, 600, 830, 250, 0, 0, 255, 255));
+//	// UHD 1440p  | Since type "int" risk calculation error, this has to be considered as potential hazard
+//
+//		// MAP AREA
+//	rectangles.push_back(new Rectangle(750 * 1.5, 20 * 1.5, 75 * 1.5, 125 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(770 * 1.5, 20 * 1.5, 75 * 1.5, 875 * 1.5, 0, 0, 255, 255)); // Width is different most likely because of map differences
+//	rectangles.push_back(new Rectangle(20 * 1.5, 750 * 1.5, 75 * 1.5, 125 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(20 * 1.5, 750 * 1.5, 825 * 1.5, 125 * 1.5, 0, 0, 255, 255));
+//
+//
+//
+//	// OBSTACLES (Everything writes from left corner->down/right)
+//	/*
+//		//RANGE
+//		Minimum x-value is: 131 pixels + (minimum 36 per rectangle)
+//		Minimum y-value is: > 36 pixels (Might be able to get it working correctly if Pac-man is a circle collider :thonk:
+//
+//		Maximum x-value is: 714 pixels
+//		Maximum y-value is: > 36 pixels away from edge
+//
+//		//MIDDLE
+//		(Approximately) Middle of sqaure: (x = 450 , y = 500) !NB This offsets by about 20 pixels if not more (because of border and rectangle width)
+//
+//		//Starting and stop points (for convenience)
+//		End of upper Y border starts at 145
+//	*/
+//
+//	// *WARNING* Some of these overlap / stretch across other rows
+//	// First row | y = 217
+//	rectangles.push_back(new Rectangle(50 * 1.5, 177 * 1.5, 435 * 1.5, 145 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(50 * 1.5, 177 * 1.5, 435 * 1.5, 698 * 1.5, 0, 0, 255, 255));
+//
+//
+//	// Second row | y =
+//	rectangles.push_back(new Rectangle(116 * 1.5, 105 * 1.5, 131 * 1.5, 217 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(116 * 1.5, 105 * 1.5, 283 * 1.5, 217 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(116 * 1.5, 105 * 1.5, 521 * 1.5, 217 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(116 * 1.5, 105 * 1.5, 673 * 1.5, 217 * 1.5, 0, 0, 255, 255));
+//
+//	// Third row | y = 398 (End 492 )
+//
+//	rectangles.push_back(new Rectangle(116 * 1.5, 50 * 1.5, 131 * 1.5, 398 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(30 * 1.5, 94 * 1.5, 283 * 1.5, 398 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(222 * 1.5, 30 * 1.5, 350 * 1.5, 398 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(30 * 1.5, 94 * 1.5, 607 * 1.5, 398 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(116 * 1.5, 50 * 1.5, 673 * 1.5, 398 * 1.5, 0, 0, 255, 255));
+//
+//	// Fourth row | y = 528 (And 592, END 622) 
+//
+//	rectangles.push_back(new Rectangle(116 * 1.5, 50 * 1.5, 131 * 1.5, 572 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(30 * 1.5, 94 * 1.5, 283 * 1.5, 528 * 1.5, 0, 0, 255, 255));
+//
+//	rectangles.push_back(new Rectangle(222 * 1.5, 30 * 1.5, 350 * 1.5, 592 * 1.5, 0, 0, 255, 255)); //Middle bar has different height (30 pixels up from vertical bar end)
+//
+//	rectangles.push_back(new Rectangle(30 * 1.5, 94 * 1.5, 607 * 1.5, 528 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(116 * 1.5, 50 * 1.5, 673 * 1.5, 572 * 1.5, 0, 0, 255, 255));
+//	// Collider can't handle scenario (Check later)
+///*rectangles.push_back(new Rectangle(116, 10, 131, 504, 0, 0, 255, 255));
+//rectangles.push_back(new Rectangle(116, 10, 673, 504, 0, 0, 255, 255));*/
+//
+//
+//
+//// Fifth row | y = 
+//
+//	rectangles.push_back(new Rectangle(116 * 1.5, 105 * 1.5, 131 * 1.5, 694 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(116 * 1.5, 105 * 1.5, 283 * 1.5, 694 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(116 * 1.5, 105 * 1.5, 521 * 1.5, 694 * 1.5, 0, 0, 255, 255));
+//	rectangles.push_back(new Rectangle(116 * 1.5, 105 * 1.5, 673 * 1.5, 694 * 1.5, 0, 0, 255, 255));
+//
+//	// Final row | Consider writing order | *Warping*
+//
+//
+//
+//	//pills
+//	pills.push_back(new Rectangle(12 * 1.5, 12 * 1.5, 300 * 1.5, 500 * 1.5, 240, 94, 35, 255));
+//	pills.push_back(new Rectangle(12 * 1.5, 1 * 1.52, 400 * 1.5, 500 * 1.5, 240, 94, 35, 255));
+//	pills.push_back(new Rectangle(12 * 1.5, 12 * 1.5, 500 * 1.5, 500 * 1.5, 240, 94, 35, 255));
+//	pills.push_back(new Rectangle(12 * 1.5, 12 * 1.5, 600 * 1.5, 500 * 1.5, 240, 94, 35, 255));
+//	pills.push_back(new Rectangle(12 * 1.5, 12 * 1.5, 700 * 1.5, 500 * 1.5, 240, 94, 35, 255));
 
-	//inner walls
-	rectangles.push_back(new Rectangle(50, 50, 56, 346, 0, 0, 255, 255));
+
+//=================================================================================================================================
+
+
+
+
+	// FULL HD 1080p
+
+	// MAP AREA
+	rectangles.push_back(new Rectangle(750, 20, 75, 125, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(770, 20, 75, 875, 0, 0, 255, 255)); // Width is different most likely because of map differences
+	rectangles.push_back(new Rectangle(20, 750, 75, 125, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(20, 750, 825, 125, 0, 0, 255, 255));
+
+	
+	
+	// OBSTACLES (Everything writes from left corner->down/right)
+	/*	
+		//RANGE
+		Minimum x-value is: 131 pixels + (minimum 36 per rectangle)
+		Minimum y-value is: > 36 pixels (Might be able to get it working correctly if Pac-man is a circle collider :thonk: 
+
+		Maximum x-value is: 714 pixels
+		Maximum y-value is: > 36 pixels away from edge
+
+		//MIDDLE
+		(Approximately) Middle of sqaure: (x = 450 , y = 500) !NB This offsets by about 20 pixels if not more (because of border and rectangle width)
+
+		//Starting and stop points (for convenience)
+		End of upper Y border starts at 145
+	*/
+
+	// *WARNING* Some of these overlap / stretch across other rows
+	// First row | y = 217
+	rectangles.push_back(new Rectangle(50, 177, 435, 145, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(50, 177, 435, 698, 0, 0, 255, 255));
+	
+
+	// Second row | y =
+	rectangles.push_back(new Rectangle(116, 105, 131, 217, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(116, 105, 283, 217, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(116, 105, 521, 217, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(116, 105, 673, 217, 0, 0, 255, 255));
+
+	// Third row | y = 398 (End 492 )
+
+	rectangles.push_back(new Rectangle(116, 50, 131, 398, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(30, 94, 283, 398, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(222, 30, 350, 398, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(30, 94, 607, 398, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(116, 50, 673, 398, 0, 0, 255, 255));
+
+	// Fourth row | y = 528 (And 592, END 622) 
+
+	rectangles.push_back(new Rectangle(116, 50, 131, 572, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(30, 94, 283, 528, 0, 0, 255, 255));
+
+	rectangles.push_back(new Rectangle(222, 30, 350, 592, 0, 0, 255, 255)); //Middle bar has different height (30 pixels up from vertical bar end)
+
+	rectangles.push_back(new Rectangle(30, 94, 607, 528, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(116, 50, 673, 572, 0, 0, 255, 255));
+																			// Collider can't handle scenario (Check later)
+	/*rectangles.push_back(new Rectangle(116, 10, 131, 504, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(116, 10, 673, 504, 0, 0, 255, 255));*/
+
+	
+
+	// Fifth row | y = 
+
+	rectangles.push_back(new Rectangle(116, 105, 131, 694, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(116, 105, 283, 694, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(116, 105, 521, 694, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(116, 105, 673, 694, 0, 0, 255, 255));
+
+	// Final row | Consider writing order | *Warping*
+
+
 
 	//pills
 	pills.push_back(new Rectangle(12, 12, 300, 500, 240, 94, 35, 255));

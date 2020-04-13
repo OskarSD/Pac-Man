@@ -4,7 +4,12 @@ void Game_Manager::running() {
 
 	SDL_Init(SDL_INIT_VIDEO);
 
-	Window window("Pac-Man", 850, 850);
+	////UHD 1440p | Since type "int" risk calculation error, this has to be considered as potential hazard
+
+	//Window window("Pac-Man", 950 * 1.5, 950 * 1.5);
+
+	//FULL HD 1080p
+	Window window("Pac-Man", 950, 950);
 
 	Arena arena;
 
