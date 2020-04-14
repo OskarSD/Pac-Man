@@ -1,35 +1,227 @@
 #include "ghost.h"
 
-Ghost::Ghost(std::string color) {
+Ghost::Ghost(std::string color, int x, int y) {
     this->_color = color;
+    this->_xPos = x;
+    this->_yPos = y;
 }
 
-Rectangle Ghost::_rectangle(int x, int y, std::string color) {
+Rectangle Ghost::rectangle(int x, int y, std::string color) {
 
-    std::string image;
+    Rectangle rect_ghost(32, 32, x, y, animation(color));
 
-    if (color == "cyan") {
-        image = "assets/cyanghost.png";
-    }
-
-    else if (color == "pink") {
-        image = "assets/pinkghost.png";
-    }
-
-    else if (color == "yellow") {
-        image = "assets/yellowghost.png";
-    }
-
-    else if (color == "red") {
-        image = "assets/redghost.jpg";
-    }
-
-    else {
-        std::cerr << "bad color" << std::endl;
-    }
-
-    Rectangle rect_ghost(32, 32, x, y, image);
     return rect_ghost;
+
+}
+
+std::string Ghost::animation(std::string color) {
+
+    std::string sprite;
+
+    //Inky sprites depending on the amount of frames that has been passed
+    //and current direction
+    if (color == "Inky") {
+
+        switch (_currentDirection) {
+        case 0:
+            //idle
+            if (animationCount <= 14) {
+                sprite = "assets/ib_right_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/ib_right_2.png";
+            }
+            break;
+        case 1:
+            //up sprite
+            if (animationCount <= 14) {
+                sprite = "assets/ib_up_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/ib_up_2.png";
+            }
+            break;
+        case 2:
+            //left sprite
+            if (animationCount <= 14) {
+                sprite = "assets/ib_left_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/ib_left_2.png";
+            }
+            break;
+        case 3:
+            //down sprite
+            if (animationCount <= 14) {
+                sprite = "assets/ib_down_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/ib_down_2.png";
+            }
+            break;
+        case 4:
+            //right sprite
+            if (animationCount <= 14) {
+                sprite = "assets/ib_right_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/ib_right_2.png";
+            }
+            break;
+        }
+
+    }
+
+    //Pinky sprites depending on the amount of frames that has been passed
+    //and current direction
+    else if (color == "Pinky") {
+
+        switch (_currentDirection) {
+        case 0:
+            //idle
+            if (animationCount <= 14) {
+                sprite = "assets/pb_right_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/pb_right_2.png";
+            }
+            break;
+        case 1:
+            //up sprite
+            if (animationCount <= 14) {
+                sprite = "assets/pb_up_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/pb_up_2.png";
+            }
+            break;
+        case 2:
+            //left sprite
+            if (animationCount <= 14) {
+                sprite = "assets/pb_left_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/pb_left_2.png";
+            }
+            break;
+        case 3:
+            //down sprite
+            if (animationCount <= 14) {
+                sprite = "assets/pb_down_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/pb_down_2.png";
+            }
+            break;
+        case 4:
+            //right sprite
+            if (animationCount <= 14) {
+                sprite = "assets/pb_right_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/pb_right_2.png";
+            }
+            break;
+        }
+
+    }
+
+    //Clyde sprites depending on the amount of frames that has been passed
+    //and current direction
+    else if (color == "Clyde") {
+
+        switch (_currentDirection) {
+        case 0:
+            //idle
+            if (animationCount <= 14) {
+                sprite = "assets/cb_right_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/cb_right_2.png";
+            }
+            break;
+        case 1:
+            //up sprite
+            if (animationCount <= 14) {
+                sprite = "assets/cb_up_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/cb_up_2.png";
+            }
+            break;
+        case 2:
+            //left sprite
+            if (animationCount <= 14) {
+                sprite = "assets/cb_left_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/cb_left_2.png";
+            }
+            break;
+        case 3:
+            //down sprite
+            if (animationCount <= 14) {
+                sprite = "assets/cb_down_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/cb_down_2.png";
+            }
+            break;
+        case 4:
+            //right sprite
+            if (animationCount <= 14) {
+                sprite = "assets/cb_right_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/cb_right_2.png";
+            }
+            break;
+        }
+
+    }
+
+    //Blinky sprites depending on the amount of frames that has been passed
+    //and current direction
+    else if (color == "Blinky") {
+
+        switch (_currentDirection) {
+        case 0:
+            //idle
+            if (animationCount <= 14) {
+                sprite = "assets/gb_right_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/gb_right_2.png";
+            }
+            break;
+        case 1:
+            //up sprite
+            if (animationCount <= 14) {
+                sprite = "assets/gb_up_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/gb_up_2.png";
+            }
+            break;
+        case 2:
+            //left sprite
+            if (animationCount <= 14) {
+                sprite = "assets/gb_left_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/gb_left_2.png";
+            }
+            break;
+        case 3:
+            //down sprite
+            if (animationCount <= 14) {
+                sprite = "assets/gb_down_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/gb_down_2.png";
+            }
+            break;
+        case 4:
+            //right sprite
+            if (animationCount <= 14) {
+                sprite = "assets/gb_right_1.png";
+            } else if (animationCount <= 30 && animationCount > 14) {
+                sprite = "assets/gb_right_2.png";
+            }
+            break;
+        }
+
+    }
+
+    animationCount++;
+
+    //reset
+    if (animationCount == 30) {
+        animationCount = 0;
+    }
+
+    return sprite;
 
 }
 
@@ -164,6 +356,6 @@ void Ghost::movement(int intCollision) {
         _xPos += 2;
     }
 
-    _rectangle(_xPos, _yPos, _color).draw();
+    rectangle(_xPos, _yPos, _color).draw();
 
 }

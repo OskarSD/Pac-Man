@@ -134,19 +134,19 @@ void Arena::createArena() {
 	// Third row | y = 398 (End 492 )
 
 	rectangles.push_back(new Rectangle(116, 50, 131, 398, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(30, 76, 283, 398, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(222, 30, 350, 398, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(30, 76, 607, 398, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(32, 76, 283, 398, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(217, 30, 352, 398, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(32, 76, 605, 398, 0, 0, 255, 255));
 	rectangles.push_back(new Rectangle(116, 50, 673, 398, 0, 0, 255, 255));
 
 	// Fourth row | y = 528 (And 592, END 622) 
 
 	rectangles.push_back(new Rectangle(116, 50, 131, 572, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(30, 76, 283, 546, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(32, 76, 283, 546, 0, 0, 255, 255));
 
-	rectangles.push_back(new Rectangle(222, 30, 350, 592, 0, 0, 255, 255)); //Middle bar has different height (30 pixels up from vertical bar end)
+	rectangles.push_back(new Rectangle(217, 30, 352, 592, 0, 0, 255, 255)); //Middle bar has different height (30 pixels up from vertical bar end)
 
-	rectangles.push_back(new Rectangle(30, 76, 607, 546, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(32, 76, 605, 546, 0, 0, 255, 255));
 	rectangles.push_back(new Rectangle(116, 50, 673, 572, 0, 0, 255, 255));
 																			// Collider can't handle scenario (Check later)
 	/*rectangles.push_back(new Rectangle(116, 10, 131, 504, 0, 0, 255, 255));
@@ -166,11 +166,11 @@ void Arena::createArena() {
 
 
 	//pills
-	pills.push_back(new Rectangle(12, 12, 300, 500, 240, 94, 35, 255));
-	pills.push_back(new Rectangle(12, 12, 400, 500, 240, 94, 35, 255));
-	pills.push_back(new Rectangle(12, 12, 500, 500, 240, 94, 35, 255));
-	pills.push_back(new Rectangle(12, 12, 600, 500, 240, 94, 35, 255));
-	pills.push_back(new Rectangle(12, 12, 700, 500, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(12, 12, 295, 486, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(12, 12, 295, 516, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(12, 12, 615, 486, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(12, 12, 615, 516, 240, 94, 35, 255));
 }
 
 //draw all rectangles in arena

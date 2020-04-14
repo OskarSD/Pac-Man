@@ -1,8 +1,80 @@
 #include "pac_man.h"
 
-Rectangle Pac_man::_rectangle(int x, int y) {
-    Rectangle rect_pac_man(32, 32, x, y, "assets/pogfish.jpg");
+Pac_man::Pac_man(int x, int y) {
+    this->_xPos = x;
+    this->_yPos = y;
+}
+
+Rectangle Pac_man::rectangle(int x, int y) {
+
+    Rectangle rect_pac_man(32, 32, x, y, animation());
+    
     return rect_pac_man;
+
+}
+
+//shows different sprites depending on the amount of frames that has been passed
+//and current direction
+std::string Pac_man::animation() {
+
+    std::string sprite;
+
+    switch (_currentDirection) {
+    case 0:
+        //idle
+        sprite = "assets/pm_1.png";
+        break;
+    case 1:
+        //up sprite
+        if (animationCount <= 10) {
+            sprite = "assets/pm_1.png";
+        } else if (animationCount <= 20 && animationCount > 10) {
+            sprite = "assets/pm_up_2.png";
+        } else if (animationCount <= 30 && animationCount > 20) {
+            sprite = "assets/pm_up_3.png";
+        }
+        break;
+    case 2:
+        //left sprite
+        if (animationCount <= 10) {
+            sprite = "assets/pm_1.png";
+        } else if (animationCount <= 20 && animationCount > 10) {
+            sprite = "assets/pm_left_2.png";
+        } else if (animationCount <= 30 && animationCount > 20) {
+            sprite = "assets/pm_left_3.png";
+        }
+        break;
+    case 3:
+        //down sprite
+        if (animationCount <= 10) {
+            sprite = "assets/pm_1.png";
+        } else if (animationCount <= 20 && animationCount > 10) {
+            sprite = "assets/pm_down_2.png";
+        } else if (animationCount <= 30 && animationCount > 20) {
+            sprite = "assets/pm_down_3.png";
+        }
+        break;
+    case 4:
+        //right sprite
+        if (animationCount <= 10) {
+            sprite = "assets/pm_1.png";
+        } else if (animationCount <= 20 && animationCount > 10) {
+            sprite = "assets/pm_right_2.png";
+        } else if (animationCount <= 30 && animationCount > 20) {
+            sprite = "assets/pm_right_3.png";
+        }
+        break;
+    }
+
+    animationCount++;
+
+    //reset
+    if (animationCount == 30) {
+        animationCount = 0;
+    }
+
+    return sprite;
+
 }
 
 //movement logic
@@ -140,7 +212,7 @@ void Pac_man::movement(int intCollision) {
         _xPos += 2;
     }
 
-    _rectangle(_xPos, _yPos).draw();
+    rectangle(_xPos, _yPos).draw();
 
 }
 

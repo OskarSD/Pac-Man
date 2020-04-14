@@ -8,7 +8,7 @@
 
 class Ghost {
 public:
-	Ghost(std::string color);
+	Ghost(std::string color, int x, int y);
 
 	void movement(int intCollision);
 
@@ -16,15 +16,18 @@ public:
 	int getY() { return _yPos; }
 
 private:
-	int _xPos = 500;
-	int _yPos = 700;
+	int animationCount = 0;
+
+	int _xPos = 0;
+	int _yPos = 0;
 
 	int _currentDirection = 0;
-	int _upcomingDirection = 0;
+	int _upcomingDirection = 2;
 
 	std::string _color;
 
-	Rectangle _rectangle(int x, int y, std::string color);
+	Rectangle rectangle(int x, int y, std::string color);
+	std::string animation(std::string color);
 
 };
 

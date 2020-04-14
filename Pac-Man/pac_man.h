@@ -8,23 +8,25 @@
 
 class Pac_man {
 public:
+	Pac_man(int x, int y);
 	void movement(int intCollision);
-	//void display();
 	void pollEvents(SDL_Event& event);
-
 	int getX() { return _xPos; }
 	int getY() { return _yPos; }
 
 private:
-	int _xPos = 409;
-	int _yPos = 410;
+	int animationCount = 0;
+
+	int _xPos = 0;
+	int _yPos = 0;
 
 	int _currentDirection = 0;
 	int _upcomingDirection = 0;
 
 	int _intCollision = 0;
 
-	Rectangle _rectangle(int x, int y);
+	Rectangle rectangle(int x, int y);
+	std::string animation();
 
 };
 
