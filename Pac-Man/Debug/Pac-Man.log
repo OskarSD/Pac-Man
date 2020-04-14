@@ -1,5 +1,6 @@
 ﻿  game_manager.cpp
   ghost.cpp
   main.cpp
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\main.cpp(4,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
   Pac-Man.vcxproj -> C:\Users\ostav\Documents\Pac-Man\Debug\Pac-Man.exe

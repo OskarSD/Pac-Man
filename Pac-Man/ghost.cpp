@@ -26,41 +26,41 @@ std::string Ghost::animation(std::string color) {
         case 0:
             //idle
             if (animationCount <= 14) {
-                sprite = "assets/ib_right_1.png";
+                sprite = "assets/gi_right_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/ib_right_2.png";
+                sprite = "assets/gi_right_2.png";
             }
             break;
         case 1:
             //up sprite
             if (animationCount <= 14) {
-                sprite = "assets/ib_up_1.png";
+                sprite = "assets/gi_up_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/ib_up_2.png";
+                sprite = "assets/gi_up_2.png";
             }
             break;
         case 2:
             //left sprite
             if (animationCount <= 14) {
-                sprite = "assets/ib_left_1.png";
+                sprite = "assets/gi_left_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/ib_left_2.png";
+                sprite = "assets/gi_left_2.png";
             }
             break;
         case 3:
             //down sprite
             if (animationCount <= 14) {
-                sprite = "assets/ib_down_1.png";
+                sprite = "assets/gi_down_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/ib_down_2.png";
+                sprite = "assets/gi_down_2.png";
             }
             break;
         case 4:
             //right sprite
             if (animationCount <= 14) {
-                sprite = "assets/ib_right_1.png";
+                sprite = "assets/gi_right_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/ib_right_2.png";
+                sprite = "assets/gi_right_2.png";
             }
             break;
         }
@@ -75,41 +75,41 @@ std::string Ghost::animation(std::string color) {
         case 0:
             //idle
             if (animationCount <= 14) {
-                sprite = "assets/pb_right_1.png";
+                sprite = "assets/gp_right_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/pb_right_2.png";
+                sprite = "assets/gp_right_2.png";
             }
             break;
         case 1:
             //up sprite
             if (animationCount <= 14) {
-                sprite = "assets/pb_up_1.png";
+                sprite = "assets/gp_up_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/pb_up_2.png";
+                sprite = "assets/gp_up_2.png";
             }
             break;
         case 2:
             //left sprite
             if (animationCount <= 14) {
-                sprite = "assets/pb_left_1.png";
+                sprite = "assets/gp_left_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/pb_left_2.png";
+                sprite = "assets/gp_left_2.png";
             }
             break;
         case 3:
             //down sprite
             if (animationCount <= 14) {
-                sprite = "assets/pb_down_1.png";
+                sprite = "assets/gp_down_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/pb_down_2.png";
+                sprite = "assets/gp_down_2.png";
             }
             break;
         case 4:
             //right sprite
             if (animationCount <= 14) {
-                sprite = "assets/pb_right_1.png";
+                sprite = "assets/gp_right_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/pb_right_2.png";
+                sprite = "assets/gp_right_2.png";
             }
             break;
         }
@@ -124,41 +124,41 @@ std::string Ghost::animation(std::string color) {
         case 0:
             //idle
             if (animationCount <= 14) {
-                sprite = "assets/cb_right_1.png";
+                sprite = "assets/gc_right_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/cb_right_2.png";
+                sprite = "assets/gc_right_2.png";
             }
             break;
         case 1:
             //up sprite
             if (animationCount <= 14) {
-                sprite = "assets/cb_up_1.png";
+                sprite = "assets/gc_up_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/cb_up_2.png";
+                sprite = "assets/gc_up_2.png";
             }
             break;
         case 2:
             //left sprite
             if (animationCount <= 14) {
-                sprite = "assets/cb_left_1.png";
+                sprite = "assets/gc_left_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/cb_left_2.png";
+                sprite = "assets/gc_left_2.png";
             }
             break;
         case 3:
             //down sprite
             if (animationCount <= 14) {
-                sprite = "assets/cb_down_1.png";
+                sprite = "assets/gc_down_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/cb_down_2.png";
+                sprite = "assets/gc_down_2.png";
             }
             break;
         case 4:
             //right sprite
             if (animationCount <= 14) {
-                sprite = "assets/cb_right_1.png";
+                sprite = "assets/gc_right_1.png";
             } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/cb_right_2.png";
+                sprite = "assets/gc_right_2.png";
             }
             break;
         }
@@ -227,10 +227,10 @@ std::string Ghost::animation(std::string color) {
 
 void Ghost::movement(int intCollision) {
     //std::cout << intCollision << std::endl;
-    bool upC = false;
-    bool leftC = false;
-    bool downC = false;
-    bool rightC = false;
+    upC = false;
+    leftC = false;
+    downC = false;
+    rightC = false;
 
     //turns intCollision into usable bools
     switch (intCollision) {
@@ -357,5 +357,19 @@ void Ghost::movement(int intCollision) {
     }
 
     rectangle(_xPos, _yPos, _color).draw();
+
+}
+
+void Ghost::directions() {
+
+    int rng = rand() % 4 + 1;
+
+    //force new direction if there is a collision in moving direction
+    if ((_currentDirection == 1 && upC) || (_currentDirection == 2 && leftC) || 
+        (_currentDirection == 3 && downC) || (_currentDirection == 4 && rightC)) {
+        
+        _upcomingDirection = rng;
+    
+    }
 
 }

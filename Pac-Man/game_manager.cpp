@@ -15,10 +15,10 @@ void Game_Manager::running() {
 
 	Pac_man pac_man(444, 640);
 
-	//Ghost inky("Inky");
-	//Ghost pinky("Pinky");
-	//Ghost clyde("Clyde");
-	Ghost blinky("Blinky", 700, 640);
+	Ghost inky("Inky", 400, 450);
+	Ghost pinky("Pinky", 490, 450);
+	Ghost clyde("Clyde", 400, 540);
+	Ghost blinky("Blinky", 490, 540);
 
 	arena.createArena();
 
@@ -33,10 +33,16 @@ void Game_Manager::running() {
 		pac_man.movement(arena.arenaCollision(pac_man.getX(), pac_man.getY(), 32, 32));
 
 		//has a loop which checks if any rectangles collides with the ghost
-			//inky.movement(arena.arenaCollision(inky.getX(), inky.getY(), 32, 32));
-			//pinky.movement(arena.arenaCollision(pinky.getX(), pinky.getY(), 32, 32));
-			//clyde.movement(arena.arenaCollision(clyde.getX(), clyde.getY(), 32, 32));
+		inky.movement(arena.arenaCollision(inky.getX(), inky.getY(), 32, 32));
+		pinky.movement(arena.arenaCollision(pinky.getX(), pinky.getY(), 32, 32));
+		clyde.movement(arena.arenaCollision(clyde.getX(), clyde.getY(), 32, 32));
 		blinky.movement(arena.arenaCollision(blinky.getX(), blinky.getY(), 32, 32));
+
+		//handles ghost directions
+		inky.directions();
+		pinky.directions();
+		clyde.directions();
+		blinky.directions();
 
 		//checks if pac-man collides with a pill and then return points
 		arena.pillCollision(pac_man.getX(), pac_man.getY(), 32, 32);
