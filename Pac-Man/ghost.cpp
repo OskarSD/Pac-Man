@@ -1,12 +1,12 @@
 #include "ghost.h"
 
-Ghost::Ghost(std::string color, int x, int y) {
+Ghost::Ghost(std::string color, float x, float y) {
     this->_color = color;
     this->_xPos = x;
     this->_yPos = y;
 }
 
-Rectangle Ghost::rectangle(int x, int y, std::string color) {
+Rectangle Ghost::rectangle(float x, float y, std::string color) {
 
     Rectangle rect_ghost(32, 32, x, y, animation(color));
 
@@ -347,13 +347,13 @@ void Ghost::movement(int intCollision) {
     }
 
     if (_currentDirection == 1 && !upC) {
-        _yPos -= 2;
+        _yPos -= 2.5;
     } else if (_currentDirection == 2 && !leftC) {
-        _xPos -= 2;
+        _xPos -= 2.5;
     } else if (_currentDirection == 3 && !downC) {
-        _yPos += 2;
+        _yPos += 2.5;
     } else if (_currentDirection == 4 && !rightC) {
-        _xPos += 2;
+        _xPos += 2.5;
     }
 
     rectangle(_xPos, _yPos, _color).draw();

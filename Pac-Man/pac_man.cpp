@@ -1,11 +1,11 @@
 #include "pac_man.h"
 
-Pac_man::Pac_man(int x, int y) {
+Pac_man::Pac_man(float x, float y) {
     this->_xPos = x;
     this->_yPos = y;
 }
 
-Rectangle Pac_man::rectangle(int x, int y) {
+Rectangle Pac_man::rectangle(float x, float y) {
 
     Rectangle rect_pac_man(32, 32, x, y, animation());
     
@@ -203,13 +203,13 @@ void Pac_man::movement(int intCollision) {
     }
 
     if (_currentDirection == 1 && !upC) {
-        _yPos -= 2;
+        _yPos -= 2.5;
     } else if (_currentDirection == 2 && !leftC) {
-        _xPos -= 2;
+        _xPos -= 2.5;
     } else if (_currentDirection == 3 && !downC) {
-        _yPos += 2;
+        _yPos += 2.5;
     } else if (_currentDirection == 4 && !rightC) {
-        _xPos += 2;
+        _xPos += 2.5;
     }
 
     rectangle(_xPos, _yPos).draw();

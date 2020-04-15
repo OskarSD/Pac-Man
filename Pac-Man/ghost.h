@@ -11,20 +11,20 @@
 
 class Ghost {
 public:
-	Ghost(std::string color, int x, int y);
+	Ghost(std::string color, float x, float y);
 
 	void movement(int intCollision);
 
 	void directions();
 
-	int getX() { return _xPos; }
-	int getY() { return _yPos; }
+	float getX() { return _xPos; }
+	float getY() { return _yPos; }
 
 private:
 	int animationCount = 0;
 
-	int _xPos = 0;
-	int _yPos = 0;
+	float _xPos = 0;
+	float _yPos = 0;
 
 	int _currentDirection = 0;
 	int _upcomingDirection = 0;
@@ -36,7 +36,7 @@ private:
 
 	std::string _color;
 
-	Rectangle rectangle(int x, int y, std::string color);
+	Rectangle rectangle(float x, float y, std::string color);
 	std::string animation(std::string color);
 
 };
