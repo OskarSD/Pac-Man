@@ -37,6 +37,9 @@ void Game_Manager::running() {
 		//draw pills
 		arena.drawPills();
 
+		//draw warps
+		//arena.drawWarps();
+
 		//has a loop which checks if any rectangles collides with pac-man
 		pac_man.movement(arena.arenaCollision(pac_man.getX(), pac_man.getY(), 32, 32));
 
