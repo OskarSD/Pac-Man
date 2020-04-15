@@ -69,6 +69,12 @@ void Game_Manager::running() {
 		}
 		*/
 
+		frameTime = SDL_GetTicks() - frameStart;
+
+		if (frameDelay > frameTime) {
+			SDL_Delay(frameDelay - frameTime);
+		}
+
 	}
 
 }
