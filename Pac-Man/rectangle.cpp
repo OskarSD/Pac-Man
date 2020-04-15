@@ -1,12 +1,12 @@
 #include "rectangle.h"
 
 //for rectangles
-Rectangle::Rectangle(int w, int h, int x, int y, int r, int g, int b, int a) :
+Rectangle::Rectangle(float w, float h, float x, float y, int r, int g, int b, int a) :
 	_w(w), _h(h), _x(x), _y(y), _r(r), _g(g), _b(b), _a(a) {
 }
 
 //for images
-Rectangle::Rectangle(int w, int h, int x, int y, const std::string& image_path) :
+Rectangle::Rectangle(float w, float h, float x, float y, const std::string& image_path) :
 	_w(w), _h(h), _x(x), _y(y), _r(0), _g(0), _b(0), _a(0) {
 
 	SDL_Surface* surface = IMG_Load(image_path.c_str());
@@ -35,7 +35,7 @@ void Rectangle::draw() const {
 
 //checks collision between rectangle and object's position
 //and return an int depending on what kind of collision
-int Rectangle::checkCollision(int x, int y, int w, int h) {
+int Rectangle::checkCollision(float x, float y, float w, float h) {
 
 	int intCollision = 0;
 
@@ -71,7 +71,7 @@ int Rectangle::checkCollision(int x, int y, int w, int h) {
 
 }
 
-void Rectangle::pillCollision(int x, int y, int w, int h) {
+void Rectangle::pillCollision(float x, float y, float w, float h) {
 
 	if ((_x < x + w && _x > x || _x + _w > x && _x + _w < x + w) &&
 		(_y < y + h && _y > y || _y + _h > y && _y + _h < y + h)) {

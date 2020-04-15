@@ -425,7 +425,7 @@ void Ghost::directions() {
 
 }
 
-bool Ghost::deathCollision(int x, int y, int w, int h) {
+bool Ghost::deathCollision(float x, float y, float w, float h) {
 
     if ((x < _xPos + 32 && x > _xPos - 5 || x + w > _xPos && x + w < _xPos + 32 + 5) &&
         (y < _yPos + 32 && y > _yPos - 5 || y + h > _yPos && y + h < _yPos + 32 + 5)) {

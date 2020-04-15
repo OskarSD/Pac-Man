@@ -8,14 +8,14 @@
 
 class Rectangle {
 public:
-	Rectangle(int w, int h, int x, int y, int r, int g, int b, int a);
-	Rectangle(int w, int h, int x, int y, const std::string& image_path);
+	Rectangle(float w, float h, float x, float y, int r, int g, int b, int a);
+	Rectangle(float w, float h, float x, float y, const std::string& image_path);
 
 	void draw() const;
 
-	int checkCollision(int x, int y, int w, int h);
+	int checkCollision(float x, float y, float w, float h);
 
-	void pillCollision(int x, int y, int w, int h);
+	void pillCollision(float x, float y, float w, float h);
 
 	bool warpCollision(float x, float y, float w, float h);
 

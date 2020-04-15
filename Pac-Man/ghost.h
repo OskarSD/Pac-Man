@@ -17,7 +17,7 @@ public:
 
 	void directions();
 
-	bool deathCollision(int x, int y, int w, int h);
+	bool deathCollision(float x, float y, float w, float h);
 
 	void setPosition(bool keepDirection, float x, float y);
 
