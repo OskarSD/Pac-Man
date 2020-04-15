@@ -1,24 +1,26 @@
 ﻿  arena.cpp
   game_manager.cpp
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(39,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(39,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(42,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(42,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(43,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(43,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(44,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(44,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(45,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(45,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(54,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\game_manager.cpp(54,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  ghost.cpp
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\ghost.cpp(11,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\ghost.cpp(11,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(41,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(41,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(44,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(44,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(45,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(45,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(46,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(46,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(47,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(47,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(56,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(56,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(60,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(60,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(61,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(61,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(62,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(62,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(63,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\game_manager.cpp(63,38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   main.cpp
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\main.cpp(4,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  pac_man.cpp
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\pac_man.cpp(10,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Pac-Man\Pac-Man\Pac-Man\pac_man.cpp(10,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Pac-Man\Pac-Man\main.cpp(4,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
-  Pac-Man.vcxproj -> C:\Users\ostav\Documents\Pac-Man\Pac-Man\Debug\Pac-Man.exe
+  Pac-Man.vcxproj -> C:\Users\ostav\Documents\Pac-Man\Debug\Pac-Man.exe

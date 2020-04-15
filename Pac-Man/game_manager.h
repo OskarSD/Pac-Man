@@ -15,9 +15,10 @@ public:
 private:
 	const int fps = 60;
 	const int frameDelay = 1000 / fps;
-
-	Uint32 frameStart;
 	int frameTime;
+	Uint32 frameStart;
+
+	int lives = 3;
 
 };
 

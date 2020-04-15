@@ -424,3 +424,28 @@ void Ghost::directions() {
     }
 
 }
+
+bool Ghost::deathCollision(int x, int y, int w, int h) {
+
+    if ((x < _xPos + 32 && x > _xPos - 5 || x + w > _xPos && x + w < _xPos + 32 + 5) &&
+        (y < _yPos + 32 && y > _yPos - 5 || y + h > _yPos && y + h < _yPos + 32 + 5)) {
+
+        return true;
+
+    }
+    
+    else {
+
+        return false;
+    }
+
+}
+
+void Ghost::setPosition(float x, float y) {
+
+    this->_xPos = x;
+    this->_yPos = y;
+    _currentDirection = 0;
+    _upcomingDirection = 0;
+
+}

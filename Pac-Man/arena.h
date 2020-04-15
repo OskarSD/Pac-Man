@@ -14,9 +14,8 @@ public:
 	int arenaCollision(int x, int y, int w, int h);
 
 	void pillCollision(int x, int y, int w, int h);
-	//int getCollisionInfo();
 	int pillCollisionInfo();
-	bool gameOver();
+	bool noPills();
 
 private:
 	std::vector<Rectangle*> rectangles;

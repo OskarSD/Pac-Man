@@ -216,24 +216,6 @@ void Pac_man::movement(int intCollision) {
 
 }
 
-/*
-void Pac_man::display() {
-
-    if (_currentDirection == 1 && !_isUpCollision) {
-        _yPos -= 2;
-    } else if (_currentDirection == 2 && !_isLeftCollision) {
-        _xPos -= 2;
-    } else if (_currentDirection == 3 && !_isDownCollision) {
-        _yPos += 2;
-    } else if (_currentDirection == 4 && !_isRightCollision) {
-        _xPos += 2;
-    }
-
-    _rectangle(_xPos, _yPos).draw();
-
-}
-*/
-
 void Pac_man::pollEvents(SDL_Event& event) {
 
     switch (event.type) {
@@ -264,3 +246,11 @@ void Pac_man::pollEvents(SDL_Event& event) {
 
 }
 
+void Pac_man::setPosition(float x, float y) {
+    
+    this->_xPos = x;
+    this->_yPos = y;
+    _currentDirection = 0;
+    _upcomingDirection = 0;
+
+}

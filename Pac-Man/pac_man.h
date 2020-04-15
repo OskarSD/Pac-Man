@@ -11,6 +11,9 @@ public:
 	Pac_man(float x, float y);
 	void movement(int intCollision);
 	void pollEvents(SDL_Event& event);
+
+	void setPosition(float x, float y);
+
 	float getX() { return _xPos; }
 	float getY() { return _yPos; }
 

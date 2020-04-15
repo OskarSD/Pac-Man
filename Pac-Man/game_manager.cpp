@@ -13,18 +13,20 @@ void Game_Manager::running() {
 
 	Arena arena;
 
-	Pac_man pac_man(444, 640);
+	Pac_man pac_man(447, 640);
 
-	Ghost inky("Inky", 400, 450);
-	Ghost pinky("Pinky", 490, 450);
-	Ghost clyde("Clyde", 400, 540);
-	Ghost blinky("Blinky", 490, 540);
+	Ghost inky("Inky", 397, 450);
+	Ghost pinky("Pinky", 497, 450);
+	Ghost clyde("Clyde", 397, 540);
+	Ghost blinky("Blinky", 497, 540);
 
 	arena.createArena();
 
 	int points = 0;
 
-	while (!window.getClosed() && !arena.gameOver()) {
+	while (!window.getClosed() && lives > 0) {
+
+		frameStart = SDL_GetTicks();
 
 		//input from user
 		pollEvents(window, pac_man);
@@ -54,20 +56,30 @@ void Game_Manager::running() {
 		arena.pillCollision(pac_man.getX(), pac_man.getY(), 32, 32);
 		points += arena.pillCollisionInfo();
 
-		std::cout << points << std::endl;
+		//checks for collision between ghosts and pac-man
+		if (inky.deathCollision(pac_man.getX(), pac_man.getY(), 32, 32) ||
+			pinky.deathCollision(pac_man.getX(), pac_man.getY(), 32, 32) ||
+			clyde.deathCollision(pac_man.getX(), pac_man.getY(), 32, 32) ||
+			blinky.deathCollision(pac_man.getX(), pac_man.getY(), 32, 32)) {
 
-		
+			//reduce life
+			lives--;
 
-		//presents everything drawn and a black background
-		window.clear();
+			//resets positions
+			pac_man.setPosition(447, 640);
+			inky.setPosition(397, 450);
+			pinky.setPosition(497, 450);
+			clyde.setPosition(397, 540);
+			blinky.setPosition(497, 540);
 
-		/*
-		if (arena.gameOver()) {
-			std::cout << "Game Over" << std::endl;
-			system("");
+		};
+
+		if (arena.noPills()) {
 			break;
 		}
-		*/
+
+		//presents everything drawn, with a black background
+		window.clear();
 
 		frameTime = SDL_GetTicks() - frameStart;
 
