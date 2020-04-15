@@ -135,7 +135,7 @@ void Arena::createArena() {
 
 	rectangles.push_back(new Rectangle(116, 50, 131, 398, 0, 0, 255, 255));
 	rectangles.push_back(new Rectangle(32, 76, 283, 398, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(217, 30, 352, 398, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(218, 30, 351, 398, 0, 0, 255, 255));
 	rectangles.push_back(new Rectangle(32, 76, 605, 398, 0, 0, 255, 255));
 	rectangles.push_back(new Rectangle(116, 50, 673, 398, 0, 0, 255, 255));
 
@@ -144,7 +144,7 @@ void Arena::createArena() {
 	rectangles.push_back(new Rectangle(116, 50, 131, 572, 0, 0, 255, 255));
 	rectangles.push_back(new Rectangle(32, 76, 283, 546, 0, 0, 255, 255));
 
-	rectangles.push_back(new Rectangle(217, 30, 352, 592, 0, 0, 255, 255)); //Middle bar has different height (30 pixels up from vertical bar end)
+	rectangles.push_back(new Rectangle(218, 30, 351, 592, 0, 0, 255, 255)); //Middle bar has different height (30 pixels up from vertical bar end)
 
 	rectangles.push_back(new Rectangle(32, 76, 605, 546, 0, 0, 255, 255));
 	rectangles.push_back(new Rectangle(116, 50, 673, 572, 0, 0, 255, 255));
