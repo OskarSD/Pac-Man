@@ -9,7 +9,7 @@ void Game_Manager::running() {
 	//Window window("Pac-Man", 950 * 1.5, 950 * 1.5);
 
 	//FULL HD 1080p
-	Window window("Pac-Man", 950, 950);
+	Window window("Pac-Man", 930, 950);
 
 	Arena arena;
 
@@ -28,6 +28,12 @@ void Game_Manager::running() {
 
 		//input from user
 		pollEvents(window, pac_man);
+
+		//draw arena with rectangles made within it
+		arena.drawArena();
+
+		//draw pills
+		arena.drawPills();
 
 		//has a loop which checks if any rectangles collides with pac-man
 		pac_man.movement(arena.arenaCollision(pac_man.getX(), pac_man.getY(), 32, 32));
@@ -50,11 +56,7 @@ void Game_Manager::running() {
 
 		std::cout << points << std::endl;
 
-		//draw arena with rectangles made within it
-		arena.drawArena();
-
-		//draw pills
-		arena.drawPills();
+		
 
 		//presents everything drawn and a black background
 		window.clear();

@@ -165,12 +165,143 @@ void Arena::createArena() {
 
 
 
-	//pills
-	pills.push_back(new Rectangle(12, 12, 295, 486, 240, 94, 35, 255));
-	pills.push_back(new Rectangle(12, 12, 295, 516, 240, 94, 35, 255));
+	// PILLS (107 and 801 are perfectly centered on left and right corridor)
 
-	pills.push_back(new Rectangle(12, 12, 615, 486, 240, 94, 35, 255));
-	pills.push_back(new Rectangle(12, 12, 615, 516, 240, 94, 35, 255));
+	//Middle (top-side obstacles)
+	
+
+	//Left and right corridor upper middle
+
+	pills.push_back(new Rectangle(8, 8, 109, 412, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 255, 412, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 328, 412, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 583, 412, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 656, 412, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 803, 412, 240, 94, 35, 255));
+
+
+	// Left and right upper middle
+	
+	pills.push_back(new Rectangle(8, 8, 109, 448, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 144, 456, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 182, 456, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 218, 456, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 255, 448, 240, 94, 35, 255));
+	
+	pills.push_back(new Rectangle(8, 8, 328, 448, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 364, 448, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 401, 448, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 437, 448, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 474, 448, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 510, 448, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 547, 448, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 583, 448, 240, 94, 35, 255));
+	
+	pills.push_back(new Rectangle(8, 8, 656, 448, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 693, 456, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 729, 456, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 766, 456, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 803, 448, 240, 94, 35, 255));
+
+
+	//Middle of map (upper) (38 between vertically)
+	pills.push_back(new Rectangle(8, 8, 109, 484, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 144, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 182, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 218, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 255, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 291, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 328, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 364, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 401, 484, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 437, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 474, 484, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 510, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 547, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 583, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 620, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 656, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 693, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 729, 484, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 766, 484, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 803, 484, 240, 94, 35, 255));
+
+
+	//Middle of map (lower)
+	pills.push_back(new Rectangle(8, 8, 109, 520, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 144, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 182, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 218, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 255, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 291, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 328, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 364, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 401, 520, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 437, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 474, 520, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 510, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 547, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 583, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 620, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 656, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 693, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 729, 520, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 766, 520, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 803, 520, 240, 94, 35, 255));
+
+	// Left and right lower middle
+
+	pills.push_back(new Rectangle(8, 8, 109, 556, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 144, 556, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 182, 556, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 218, 556, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 255, 556, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 328, 556, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 364, 556, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 401, 556, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 437, 556, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 474, 556, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 510, 556, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 547, 556, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 583, 556, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 656, 556, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 693, 556, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 729, 556, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 766, 556, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 803, 556, 240, 94, 35, 255));
+
+	// Left corridor and right corridor lower
+	pills.push_back(new Rectangle(8, 8, 109, 592, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 255, 592, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 328, 592, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 583, 592, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 656, 592, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 803, 592, 240, 94, 35, 255));
+
+	pills.push_back(new Rectangle(8, 8, 109, 628, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 255, 628, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 328, 628, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 583, 628, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 656, 628, 240, 94, 35, 255));
+	pills.push_back(new Rectangle(8, 8, 803, 628, 240, 94, 35, 255));
 }
 
 //draw all rectangles in arena
