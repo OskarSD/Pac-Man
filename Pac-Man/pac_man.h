@@ -15,7 +15,7 @@ public:
 	int getY() { return _yPos; }
 
 private:
-	int animationCount = 0;
+	int _animationCount = 0;
 
 	int _xPos = 0;
 	int _yPos = 0;

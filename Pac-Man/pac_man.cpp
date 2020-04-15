@@ -26,51 +26,51 @@ std::string Pac_man::animation() {
         break;
     case 1:
         //up sprite
-        if (animationCount <= 10) {
+        if (_animationCount <= 10) {
             sprite = "assets/pm_1.png";
-        } else if (animationCount <= 20 && animationCount > 10) {
+        } else if (_animationCount <= 20 && _animationCount > 10) {
             sprite = "assets/pm_up_2.png";
-        } else if (animationCount <= 30 && animationCount > 20) {
+        } else if (_animationCount <= 30 && _animationCount > 20) {
             sprite = "assets/pm_up_3.png";
         }
         break;
     case 2:
         //left sprite
-        if (animationCount <= 10) {
+        if (_animationCount <= 10) {
             sprite = "assets/pm_1.png";
-        } else if (animationCount <= 20 && animationCount > 10) {
+        } else if (_animationCount <= 20 && _animationCount > 10) {
             sprite = "assets/pm_left_2.png";
-        } else if (animationCount <= 30 && animationCount > 20) {
+        } else if (_animationCount <= 30 && _animationCount > 20) {
             sprite = "assets/pm_left_3.png";
         }
         break;
     case 3:
         //down sprite
-        if (animationCount <= 10) {
+        if (_animationCount <= 10) {
             sprite = "assets/pm_1.png";
-        } else if (animationCount <= 20 && animationCount > 10) {
+        } else if (_animationCount <= 20 && _animationCount > 10) {
             sprite = "assets/pm_down_2.png";
-        } else if (animationCount <= 30 && animationCount > 20) {
+        } else if (_animationCount <= 30 && _animationCount > 20) {
             sprite = "assets/pm_down_3.png";
         }
         break;
     case 4:
         //right sprite
-        if (animationCount <= 10) {
+        if (_animationCount <= 10) {
             sprite = "assets/pm_1.png";
-        } else if (animationCount <= 20 && animationCount > 10) {
+        } else if (_animationCount <= 20 && _animationCount > 10) {
             sprite = "assets/pm_right_2.png";
-        } else if (animationCount <= 30 && animationCount > 20) {
+        } else if (_animationCount <= 30 && _animationCount > 20) {
             sprite = "assets/pm_right_3.png";
         }
         break;
     }
 
-    animationCount++;
+    _animationCount++;
 
     //reset
-    if (animationCount == 30) {
-        animationCount = 0;
+    if (_animationCount == 30) {
+        _animationCount = 0;
     }
 
     return sprite;

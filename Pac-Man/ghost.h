@@ -27,7 +27,7 @@ private:
 	int _yPos = 0;
 
 	int _currentDirection = 0;
-	int _upcomingDirection = 1;
+	int _upcomingDirection = 0;
 
 	bool upC = false;
 	bool leftC = false;

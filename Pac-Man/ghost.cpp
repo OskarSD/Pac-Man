@@ -362,14 +362,65 @@ void Ghost::movement(int intCollision) {
 
 void Ghost::directions() {
 
-    int rng = rand() % 4 + 1;
+    int changeRNG = rand() % 120 + 1;
+    int directionRNG = rand() % 4 + 1;
 
     //force new direction if there is a collision in moving direction
-    if ((_currentDirection == 1 && upC) || (_currentDirection == 2 && leftC) || 
-        (_currentDirection == 3 && downC) || (_currentDirection == 4 && rightC)) {
-        
-        _upcomingDirection = rng;
-    
+    //or randomly change upcoming direction (not backwards though)
+    if (_currentDirection == 1 && upC) {
+
+        if (directionRNG != 3) {
+            _upcomingDirection = directionRNG;
+        }
+
+    }
+
+    else if (_currentDirection == 2 && leftC) {
+
+        if (directionRNG != 4) {
+            _upcomingDirection = directionRNG;
+        }
+
+    }
+
+    else if (_currentDirection == 3 && downC) {
+
+        if (directionRNG != 1) {
+            _upcomingDirection = directionRNG;
+        }
+
+    }
+
+    else if (_currentDirection == 4 && rightC) {
+
+        if (directionRNG != 2) {
+            _upcomingDirection = directionRNG;
+        }
+
+    }
+
+    else if (changeRNG == 1) {
+
+        if (_currentDirection == 0) {
+            _upcomingDirection = directionRNG;
+        }
+
+        if (_currentDirection == 1 && directionRNG != 3) {
+            _upcomingDirection = directionRNG;
+        }
+
+        if (_currentDirection == 2 && directionRNG != 4) {
+            _upcomingDirection = directionRNG;
+        }
+
+        if (_currentDirection == 3 && directionRNG != 1) {
+            _upcomingDirection = directionRNG;
+        }
+
+        if (_currentDirection == 4 && directionRNG != 2) {
+            _upcomingDirection = directionRNG;
+        }
+
     }
 
 }
