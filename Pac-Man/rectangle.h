@@ -17,33 +17,17 @@ public:
 
 	void pillCollision(int x, int y, int w, int h);
 
-	bool getPillCollision() { return _pillCollision; }
+	bool warpCollision(float x, float y, float w, float h);
 
-	/*
-	bool getLeftCollision() { return _leftCollision; }
-	bool getRightCollision() { return _rightCollision; }
-	bool getUpCollision() { return _upCollision; }
-	bool getDownCollision() { return _downCollision; }
-	*/
+	bool getPillCollision() { return _pillCollision; }
 
 
 private:
 	int _w, _h, _x, _y, _r, _g, _b, _a;
+
 	SDL_Texture* texture = nullptr;
 
 	bool _pillCollision = false;
-
-	/*
-	bool _leftCollision = false;
-	bool _rightCollision = false;
-	bool _upCollision = false;
-	bool _downCollision = false;
-
-	bool _leftStillCollision = false;
-	bool _rightStillCollision = false;
-	bool _upStillCollision = false;
-	bool _downStillCollision = false;
-	*/
 
 
 };

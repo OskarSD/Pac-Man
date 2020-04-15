@@ -11,7 +11,7 @@ public:
 
 	void drawArena();
 	void drawPills();
-	//void drawWarps();
+	void drawWarps();
 
 	int arenaCollision(int x, int y, int w, int h);
 	void pillCollision(int x, int y, int w, int h);
@@ -20,11 +20,11 @@ public:
 
 	bool noPills();
 
-	//void warp(float x, float y, float w, float h);
+	int warp(float x, float y, float w, float h);
 
 private:
 	std::vector<Rectangle*> rectangles;
-	//std::vector<Rectangle*> warps;
+	std::vector<Rectangle*> warps;
 	std::vector<std::unique_ptr<Rectangle>> pills;
 
 };

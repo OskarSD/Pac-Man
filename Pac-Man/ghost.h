@@ -19,10 +19,12 @@ public:
 
 	bool deathCollision(int x, int y, int w, int h);
 
-	void setPosition(float x, float y);
+	void setPosition(bool keepDirection, float x, float y);
 
 	float getX() { return _xPos; }
 	float getY() { return _yPos; }
+
+	
 
 private:
 	int animationCount = 0;

@@ -79,3 +79,30 @@ void Rectangle::pillCollision(int x, int y, int w, int h) {
 	}
 
 }
+
+bool Rectangle::warpCollision(float x, float y, float w, float h) {
+
+	//left collision
+	if (x <= _x + _w + 3 && _x + _w - 3 <= x) {
+		if ((y <= _y + _h && _y <= y) || (y + h >= _y && y + h <= _y + _h)) {
+			return true;
+		} else { 
+			return false; 
+		}
+	}
+
+	//right collision
+	else if (x + w >= _x - 3 && x + w <= _x + 3) {
+		if ((y <= _y + _h && _y <= y) || (y + h >= _y && y + h <= _y + _h)) {
+			return true;
+		} else { 
+			return false; 
+		}
+	}
+
+	else {
+		return false;
+	}
+
+}
+

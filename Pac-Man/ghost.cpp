@@ -441,11 +441,15 @@ bool Ghost::deathCollision(int x, int y, int w, int h) {
 
 }
 
-void Ghost::setPosition(float x, float y) {
+void Ghost::setPosition(bool keepDirection, float x, float y) {
 
     this->_xPos = x;
     this->_yPos = y;
-    _currentDirection = 0;
-    _upcomingDirection = 0;
+
+    if (!keepDirection) {
+        _currentDirection = 0;
+        _upcomingDirection = 0;
+    }
 
 }
+

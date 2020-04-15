@@ -15,10 +15,17 @@ void Game_Manager::running() {
 
 	Pac_man pac_man(447, 640);
 
+	/*
 	Ghost inky("Inky", 397, 450);
 	Ghost pinky("Pinky", 497, 450);
 	Ghost clyde("Clyde", 397, 540);
 	Ghost blinky("Blinky", 497, 540);
+	*/
+
+	ghosts.push_back(new Ghost("Inky", 397, 450));
+	ghosts.push_back(new Ghost("Pinky", 497, 450));
+	ghosts.push_back(new Ghost("Clyde", 397, 540));
+	ghosts.push_back(new Ghost("Blinky", 497, 540));
 
 	arena.createArena();
 
@@ -27,6 +34,7 @@ void Game_Manager::running() {
 	while (!window.getClosed() && lives > 0) {
 
 		frameStart = SDL_GetTicks();
+
 
 		//input from user
 		pollEvents(window, pac_man);
@@ -38,44 +46,71 @@ void Game_Manager::running() {
 		arena.drawPills();
 
 		//draw warps
-		//arena.drawWarps();
+		arena.drawWarps();
+
+		//change pac-man's position from right to left warping point
+		if (arena.warp(pac_man.getX(), pac_man.getY(), 32, 32) == 0) {
+			pac_man.setPosition(true, 800, 490);
+		}
+
+		//change pac-man's position from right to left warping point
+		else if (arena.warp(pac_man.getX(), pac_man.getY(), 32, 32) == 1) {
+			pac_man.setPosition(true, 80, 490);
+		}
+
+		int i = 0;
+
+		//warping for ghosts
+		for (auto Game_manager : ghosts) {
+			//change ghosts' position from right to left warping point
+			if (arena.warp(ghosts[i]->getX(), ghosts[i]->getY(), 32, 32) == 0) {
+				ghosts[i]->setPosition(true, 800, 490);
+			}
+
+			//change ghosts' position from right to left warping point
+			else if (arena.warp(ghosts[i]->getX(), ghosts[i]->getY(), 32, 32) == 1) {
+				ghosts[i]->setPosition(true, 80, 490);
+			}
+
+			i++;
+
+		}
 
 		//has a loop which checks if any rectangles collides with pac-man
 		pac_man.movement(arena.arenaCollision(pac_man.getX(), pac_man.getY(), 32, 32));
 
-		//has a loop which checks if any rectangles collides with the ghost
-		inky.movement(arena.arenaCollision(inky.getX(), inky.getY(), 32, 32));
-		pinky.movement(arena.arenaCollision(pinky.getX(), pinky.getY(), 32, 32));
-		clyde.movement(arena.arenaCollision(clyde.getX(), clyde.getY(), 32, 32));
-		blinky.movement(arena.arenaCollision(blinky.getX(), blinky.getY(), 32, 32));
+		i = 0;
 
-		//handles ghost directions
-		inky.directions();
-		pinky.directions();
-		clyde.directions();
-		blinky.directions();
+		for (auto Game_manager : ghosts) {
+
+			//has a loop which checks if any rectangles collides with the ghost
+			ghosts[i]->movement(arena.arenaCollision(ghosts[i]->getX(), ghosts[i]->getY(), 32, 32));
+
+			//handles ghost directions
+			ghosts[i]->directions();
+
+			//checks for collision between ghosts and pac-man
+			if (ghosts[i]->deathCollision(pac_man.getX(), pac_man.getY(), 32, 32)) {
+
+				//reduce life
+				lives--;
+
+				//resets positions
+				pac_man.setPosition(false, 447, 640);
+				ghosts[0]->setPosition(false, 397, 450);
+				ghosts[1]->setPosition(false, 497, 450);
+				ghosts[2]->setPosition(false, 397, 540);
+				ghosts[3]->setPosition(false, 497, 540);
+
+			}
+
+			i++;
+
+		}
 
 		//checks if pac-man collides with a pill and then return points
 		arena.pillCollision(pac_man.getX(), pac_man.getY(), 32, 32);
 		points += arena.pillCollisionInfo();
-
-		//checks for collision between ghosts and pac-man
-		if (inky.deathCollision(pac_man.getX(), pac_man.getY(), 32, 32) ||
-			pinky.deathCollision(pac_man.getX(), pac_man.getY(), 32, 32) ||
-			clyde.deathCollision(pac_man.getX(), pac_man.getY(), 32, 32) ||
-			blinky.deathCollision(pac_man.getX(), pac_man.getY(), 32, 32)) {
-
-			//reduce life
-			lives--;
-
-			//resets positions
-			pac_man.setPosition(447, 640);
-			inky.setPosition(397, 450);
-			pinky.setPosition(497, 450);
-			clyde.setPosition(397, 540);
-			blinky.setPosition(497, 540);
-
-		};
 
 		if (arena.noPills()) {
 			break;

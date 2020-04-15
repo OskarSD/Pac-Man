@@ -12,7 +12,7 @@ public:
 	void movement(int intCollision);
 	void pollEvents(SDL_Event& event);
 
-	void setPosition(float x, float y);
+	void setPosition(bool keepDirection, float x, float y);
 
 	float getX() { return _xPos; }
 	float getY() { return _yPos; }

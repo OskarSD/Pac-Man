@@ -246,11 +246,14 @@ void Pac_man::pollEvents(SDL_Event& event) {
 
 }
 
-void Pac_man::setPosition(float x, float y) {
+void Pac_man::setPosition(bool keepDirection, float x, float y) {
     
     this->_xPos = x;
     this->_yPos = y;
-    _currentDirection = 0;
-    _upcomingDirection = 0;
+    
+    if (!keepDirection) {
+        _currentDirection = 0;
+        _upcomingDirection = 0;
+    }
 
 }

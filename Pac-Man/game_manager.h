@@ -18,6 +18,8 @@ private:
 	int frameTime;
 	Uint32 frameStart;
 
+	std::vector<Ghost*> ghosts;
+
 	int lives = 3;
 
 };
