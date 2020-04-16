@@ -184,7 +184,7 @@ void Arena::createArena() {
 
 		pills.emplace_back(new Rectangle(8, 8, 261, 158, 240, 94, 35, 255));
 
-		pills.emplace_back(new Rectangle(8, 8, 301, 158, 240, 94, 35, 255));
+		//pills.emplace_back(new Rectangle(8, 8, 301, 158, 240, 94, 35, 255));
 		pills.emplace_back(new Rectangle(8, 8, 341, 158, 240, 94, 35, 255));
 		pills.emplace_back(new Rectangle(8, 8, 381, 158, 240, 94, 35, 255));
 
@@ -402,7 +402,7 @@ void Arena::createArena() {
 		pills.emplace_back(new Rectangle(8, 8, 620, 520, 240, 94, 35, 255));
 		pills.emplace_back(new Rectangle(8, 8, 656, 520, 240, 94, 35, 255));
 		pills.emplace_back(new Rectangle(8, 8, 693, 520, 240, 94, 35, 255));
-		pills.emplace_back(new Rectangle(8, 8, 729, 520, 240, 94, 35, 255));
+		//pills.emplace_back(new Rectangle(8, 8, 729, 520, 240, 94, 35, 255));
 		pills.emplace_back(new Rectangle(8, 8, 766, 520, 240, 94, 35, 255));
 
 		pills.emplace_back(new Rectangle(8, 8, 803, 520, 240, 94, 35, 255));
@@ -563,7 +563,7 @@ void Arena::createArena() {
 		pills.emplace_back(new Rectangle(8, 8, 341, 846, 240, 94, 35, 255));
 		pills.emplace_back(new Rectangle(8, 8, 381, 846, 240, 94, 35, 255));
 
-		pills.emplace_back(new Rectangle(8, 8, 413, 846, 240, 94, 35, 255));
+		//pills.emplace_back(new Rectangle(8, 8, 413, 846, 240, 94, 35, 255));
 
 
 
@@ -584,9 +584,10 @@ void Arena::createArena() {
 
 
 	//-------------------- POWER PILLS --------------------//
-
-	powerPills.emplace_back(new Rectangle(14, 14, 600, 650, 255, 120, 200, 255));
-	powerPills.emplace_back(new Rectangle(14, 14, 300, 650, 255, 120, 200, 255));
+	
+	powerPills.emplace_back(new Rectangle(14, 14, 298, 155, 255, 120, 200, 255));
+	powerPills.emplace_back(new Rectangle(14, 14, 410, 843, 255, 120, 200, 255));
+	powerPills.emplace_back(new Rectangle(14, 14, 726, 517, 255, 120, 200, 255));
 
 
 	//-------------------- WARP POINTS --------------------//
