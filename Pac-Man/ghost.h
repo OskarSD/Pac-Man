@@ -13,6 +13,9 @@ class Ghost {
 public:
 	Ghost(std::string color, float x, float y);
 
+	void activeState();
+	void setState(std::string state) { _state = state; };
+
 	void movement(int intCollision);
 
 	void directions();
@@ -21,13 +24,21 @@ public:
 
 	void setPosition(bool keepDirection, float x, float y);
 
+	void resetVulnerableCount() { vulnerableCount = 600; }
+
 	float getX() { return _xPos; }
 	float getY() { return _yPos; }
 
-	
+	std::string getState() { return _state; }
 
 private:
+	std::string _state;
+	int vulnerableCount = 600;
+
 	int animationCount = 0;
+	int blinkingCount = 0;
+	bool vulnerableSprite = false;
+	bool vulnerableEndingSprite = false;
 
 	float _xPos = 0;
 	float _yPos = 0;

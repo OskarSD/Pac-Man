@@ -583,6 +583,12 @@ void Arena::createArena() {
 	}
 
 
+	//-------------------- POWER PILLS --------------------//
+
+	powerPills.emplace_back(new Rectangle(14, 14, 600, 650, 255, 120, 200, 255));
+	powerPills.emplace_back(new Rectangle(14, 14, 300, 650, 255, 120, 200, 255));
+
+
 	//-------------------- WARP POINTS --------------------//
 
 	warps.push_back(new Rectangle(20, 60, 55, 475, 0, 0, 0, 255));
@@ -608,6 +614,17 @@ void Arena::drawPills() {
 
 	for (auto &arena : pills) {
 		pills[i]->draw();
+		i++;
+	}
+
+}
+
+void Arena::drawPowerPills() {
+
+	int i = 0;
+
+	for (auto& arena : powerPills) {
+		powerPills[i]->draw();
 		i++;
 	}
 
@@ -682,6 +699,40 @@ bool Arena::noPills() {
 	else {
 		return false;
 	}
+
+}
+
+void Arena::powerPillCollision(int x, int y, int w, int h) {
+
+	int i = 0;
+
+	for (auto& arena : powerPills) {
+		powerPills[i]->powerPillCollision(x, y, w, h);
+
+		i++;
+	}
+
+}
+
+int Arena::powerPillCollisionInfo() {
+
+	int i = 0;
+	int points = 0;
+
+	for (auto& arena : powerPills) {
+
+		if (powerPills[i]->getPowerPillCollision()) {
+			_activePowerPill = true;
+			points += 50;
+			powerPills.erase(powerPills.begin() + i);
+		} else {
+			i++;
+		}
+
+
+	}
+
+	return points;
 
 }
 

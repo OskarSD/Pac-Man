@@ -29,8 +29,6 @@ void Game_Manager::running() {
 
 	arena.createArena();
 
-	int points = 0;
-
 	while (!window.getClosed() && lives > 0) {
 
 		frameStart = SDL_GetTicks();
@@ -44,6 +42,9 @@ void Game_Manager::running() {
 
 		//draw pills
 		arena.drawPills();
+
+		//draw power pills
+		arena.drawPowerPills();
 
 		//draw warps
 		arena.drawWarps();
@@ -92,17 +93,48 @@ void Game_Manager::running() {
 			//checks for collision between ghosts and pac-man
 			if (ghosts[i]->deathCollision(pac_man.getX(), pac_man.getY(), 32, 32)) {
 
-				//reduce life
-				lives--;
+				//pac-man defeats ghost
+				if (ghosts[i]->getState() == "vulnerable") {
 
-				//resets positions
-				pac_man.setPosition(false, 447, 640);
-				ghosts[0]->setPosition(false, 397, 450);
-				ghosts[1]->setPosition(false, 497, 450);
-				ghosts[2]->setPosition(false, 397, 540);
-				ghosts[3]->setPosition(false, 497, 540);
+					points += 200;
+
+					switch (i) {
+					case 0:
+						ghosts[0]->setPosition(false, 397, 450);
+						break;
+					case 1:
+						ghosts[1]->setPosition(false, 497, 450);
+						break;
+					case 2:
+						ghosts[2]->setPosition(false, 397, 540);
+						break;
+					case 3:
+						ghosts[3]->setPosition(false, 497, 540);
+						break;
+					}
+
+					ghosts[i]->setState("dangerous");
+
+				}
+
+				//ghost defeats pac-man
+				else if (ghosts[i]->getState() == "dangerous") {
+
+					//reduce life
+					lives--;
+
+					//resets positions
+					pac_man.setPosition(false, 447, 640);
+					ghosts[0]->setPosition(false, 397, 450);
+					ghosts[1]->setPosition(false, 497, 450);
+					ghosts[2]->setPosition(false, 397, 540);
+					ghosts[3]->setPosition(false, 497, 540);
+
+				}
 
 			}
+
+			ghosts[i]->activeState();
 
 			i++;
 
@@ -115,6 +147,29 @@ void Game_Manager::running() {
 		if (arena.noPills()) {
 			break;
 		}
+
+		//checks if pac-man collides with a power pill and then return points
+		arena.powerPillCollision(pac_man.getX(), pac_man.getY(), 32, 32);
+		points += arena.powerPillCollisionInfo();
+
+		//activate power pill and make ghosts vulnerable
+		if (arena.getActivePowerPill()) {
+			
+			int i = 0;
+
+			for (auto Game_manager : ghosts) {
+
+				ghosts[i]->resetVulnerableCount();
+				ghosts[i]->setState("vulnerable");
+
+				i++;
+
+			}
+
+			arena.setActivePowerPill(false);
+
+		}
+
 
 		//presents everything drawn, with a black background
 		window.clear();

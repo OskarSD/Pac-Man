@@ -20,6 +20,7 @@ private:
 
 	std::vector<Ghost*> ghosts;
 
+	int points = 0;
 	int lives = 3;
 
 };

@@ -16,10 +16,13 @@ public:
 	int checkCollision(float x, float y, float w, float h);
 
 	void pillCollision(float x, float y, float w, float h);
+	bool getPillCollision() { return _pillCollision; }
+
+	void powerPillCollision(float x, float y, float w, float h);
+	bool getPowerPillCollision() { return _powerPillCollision; }
 
 	bool warpCollision(float x, float y, float w, float h);
 
-	bool getPillCollision() { return _pillCollision; }
 
 
 private:
@@ -28,6 +31,7 @@ private:
 	SDL_Texture* texture = nullptr;
 
 	bool _pillCollision = false;
+	bool _powerPillCollision = false;
 
 
 };

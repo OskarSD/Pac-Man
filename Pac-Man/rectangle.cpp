@@ -80,6 +80,14 @@ void Rectangle::pillCollision(float x, float y, float w, float h) {
 
 }
 
+void Rectangle::powerPillCollision(float x, float y, float w, float h) {
+
+	if ((_x < x + w && _x > x || _x + _w > x && _x + _w < x + w) &&
+		(_y < y + h && _y > y || _y + _h > y && _y + _h < y + h)) {
+		_powerPillCollision = true;
+	}
+}
+
 bool Rectangle::warpCollision(float x, float y, float w, float h) {
 
 	//left collision

@@ -14,202 +14,287 @@ Rectangle Ghost::rectangle(float x, float y, std::string color) {
 
 }
 
+void Ghost::activeState() {
+    
+    std::cout << vulnerableCount << std::endl;
+    
+    if (_state == "vulnerable") {
+
+        vulnerableCount--;
+
+        //different sprites for vulnerability
+        if (vulnerableCount >= 120 && vulnerableCount < 600) {
+            vulnerableSprite = true;
+        } else {
+            vulnerableSprite = false;
+        }
+
+        //different sprites for when vulnerability is about to end
+        if (vulnerableCount < 120 && vulnerableCount > 0) {
+            vulnerableEndingSprite = true;
+        } else {
+            vulnerableEndingSprite = false;
+        }
+
+        //change back to dangerous state
+        if (vulnerableCount <= 0) {
+            _state = "dangerous";
+        }
+
+    }
+
+    else if (_state == "dangerous") {
+
+    }
+
+}
+
 std::string Ghost::animation(std::string color) {
 
     std::string sprite;
 
-    //Inky sprites depending on the amount of frames that has been passed
-    //and current direction
-    if (color == "Inky") {
+    if (!vulnerableSprite && !vulnerableEndingSprite) {
 
-        switch (_currentDirection) {
-        case 0:
-            //idle
-            if (animationCount <= 14) {
-                sprite = "assets/gi_right_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gi_right_2.png";
+        //Inky sprites depending on the amount of frames that has been passed
+        //and current direction
+        if (color == "Inky") {
+
+            switch (_currentDirection) {
+            case 0:
+                //idle
+                if (animationCount <= 14) {
+                    sprite = "assets/gi_right_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gi_right_2.png";
+                }
+
+                break;
+            case 1:
+                //up sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gi_up_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gi_up_2.png";
+                }
+
+                break;
+            case 2:
+                //left sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gi_left_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gi_left_2.png";
+                }
+
+                break;
+            case 3:
+                //down sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gi_down_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gi_down_2.png";
+                }
+
+                break;
+            case 4:
+                //right sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gi_right_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gi_right_2.png";
+                }
+
+                break;
             }
-            break;
-        case 1:
-            //up sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gi_up_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gi_up_2.png";
+
+        }
+
+        //Pinky sprites depending on the amount of frames that has been passed
+        //and current direction
+        else if (color == "Pinky") {
+
+            switch (_currentDirection) {
+            case 0:
+                //idle
+                if (animationCount <= 14) {
+                    sprite = "assets/gp_right_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gp_right_2.png";
+                }
+
+                break;
+            case 1:
+                //up sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gp_up_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gp_up_2.png";
+                }
+
+                break;
+            case 2:
+                //left sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gp_left_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gp_left_2.png";
+                }
+
+                break;
+            case 3:
+                //down sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gp_down_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gp_down_2.png";
+                }
+
+                break;
+            case 4:
+                //right sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gp_right_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gp_right_2.png";
+                }
+
+                break;
             }
-            break;
-        case 2:
-            //left sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gi_left_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gi_left_2.png";
+
+        }
+
+        //Clyde sprites depending on the amount of frames that has been passed
+        //and current direction
+        else if (color == "Clyde") {
+
+            switch (_currentDirection) {
+            case 0:
+                //idle
+                if (animationCount <= 14) {
+                    sprite = "assets/gc_right_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gc_right_2.png";
+                }
+
+                break;
+            case 1:
+                //up sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gc_up_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gc_up_2.png";
+                }
+
+                break;
+            case 2:
+                //left sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gc_left_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gc_left_2.png";
+                }
+
+                break;
+            case 3:
+                //down sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gc_down_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gc_down_2.png";
+                }
+
+                break;
+            case 4:
+                //right sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gc_right_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gc_right_2.png";
+                }
+
+                break;
             }
-            break;
-        case 3:
-            //down sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gi_down_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gi_down_2.png";
+
+        }
+
+        //Blinky sprites depending on the amount of frames that has been passed
+        //and current direction
+        else if (color == "Blinky") {
+
+            switch (_currentDirection) {
+            case 0:
+                //idle
+                if (animationCount <= 14) {
+                    sprite = "assets/gb_right_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gb_right_2.png";
+                }
+
+                break;
+            case 1:
+                //up sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gb_up_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gb_up_2.png";
+                }
+
+                break;
+            case 2:
+                //left sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gb_left_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gb_left_2.png";
+                }
+
+                break;
+            case 3:
+                //down sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gb_down_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gb_down_2.png";
+                }
+
+                break;
+            case 4:
+                //right sprite
+                if (animationCount <= 14) {
+                    sprite = "assets/gb_right_1.png";
+                } else if (animationCount <= 30 && animationCount > 14) {
+                    sprite = "assets/gb_right_2.png";
+                }
+
+                break;
             }
-            break;
-        case 4:
-            //right sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gi_right_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gi_right_2.png";
-            }
-            break;
+
         }
 
     }
 
-    //Pinky sprites depending on the amount of frames that has been passed
-    //and current direction
-    else if (color == "Pinky") {
+    //vulnerability
+    if (vulnerableSprite) {
 
-        switch (_currentDirection) {
-        case 0:
-            //idle
-            if (animationCount <= 14) {
-                sprite = "assets/gp_right_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gp_right_2.png";
-            }
-            break;
-        case 1:
-            //up sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gp_up_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gp_up_2.png";
-            }
-            break;
-        case 2:
-            //left sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gp_left_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gp_left_2.png";
-            }
-            break;
-        case 3:
-            //down sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gp_down_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gp_down_2.png";
-            }
-            break;
-        case 4:
-            //right sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gp_right_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gp_right_2.png";
-            }
-            break;
+        if (animationCount <= 14) {
+            sprite = "assets/gsv_1.png";
+        } else if (animationCount <= 30 && animationCount > 14) {
+            sprite = "assets/gsv_2.png";
         }
 
     }
 
-    //Clyde sprites depending on the amount of frames that has been passed
-    //and current direction
-    else if (color == "Clyde") {
+    //vulnerability ending
+    if (vulnerableEndingSprite) {
 
-        switch (_currentDirection) {
-        case 0:
-            //idle
-            if (animationCount <= 14) {
-                sprite = "assets/gc_right_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gc_right_2.png";
-            }
-            break;
-        case 1:
-            //up sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gc_up_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gc_up_2.png";
-            }
-            break;
-        case 2:
-            //left sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gc_left_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gc_left_2.png";
-            }
-            break;
-        case 3:
-            //down sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gc_down_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gc_down_2.png";
-            }
-            break;
-        case 4:
-            //right sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gc_right_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gc_right_2.png";
-            }
-            break;
-        }
-
-    }
-
-    //Blinky sprites depending on the amount of frames that has been passed
-    //and current direction
-    else if (color == "Blinky") {
-
-        switch (_currentDirection) {
-        case 0:
-            //idle
-            if (animationCount <= 14) {
-                sprite = "assets/gb_right_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gb_right_2.png";
-            }
-            break;
-        case 1:
-            //up sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gb_up_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gb_up_2.png";
-            }
-            break;
-        case 2:
-            //left sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gb_left_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gb_left_2.png";
-            }
-            break;
-        case 3:
-            //down sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gb_down_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gb_down_2.png";
-            }
-            break;
-        case 4:
-            //right sprite
-            if (animationCount <= 14) {
-                sprite = "assets/gb_right_1.png";
-            } else if (animationCount <= 30 && animationCount > 14) {
-                sprite = "assets/gb_right_2.png";
-            }
-            break;
+        if (animationCount <= 7) {
+            sprite = "assets/gsv_1.png";
+        } else if (animationCount <= 15 && animationCount > 7) {
+            sprite = "assets/gsv_2.png";
+        } else if (animationCount <= 23 && animationCount > 15) {
+            sprite = "assets/gev_1.png";
+        } else if (animationCount <= 30 && animationCount > 23) {
+            sprite = "assets/gev_2.png";
         }
 
     }
@@ -429,6 +514,16 @@ bool Ghost::deathCollision(float x, float y, float w, float h) {
 
     if ((x < _xPos + 32 && x > _xPos - 5 || x + w > _xPos && x + w < _xPos + 32 + 5) &&
         (y < _yPos + 32 && y > _yPos - 5 || y + h > _yPos && y + h < _yPos + 32 + 5)) {
+
+        //is pac-man deafeats a ghost, go back to normal sprites
+        if (vulnerableSprite == true) {
+            vulnerableSprite = false;
+            vulnerableCount = 0;
+        }
+        if (vulnerableEndingSprite == true) {
+            vulnerableEndingSprite = false;
+            vulnerableCount = 0;
+        }
 
         return true;
 
