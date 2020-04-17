@@ -20,6 +20,7 @@ void Ghost::activeState() {
     
     if (_state == "vulnerable") {
 
+        speed = 1.5;
         vulnerableCount--;
 
         //different sprites for vulnerability
@@ -44,7 +45,7 @@ void Ghost::activeState() {
     }
 
     else if (_state == "dangerous") {
-
+        speed = 2.5;
     }
 
 }
@@ -432,13 +433,13 @@ void Ghost::movement(int intCollision) {
     }
 
     if (_currentDirection == 1 && !upC) {
-        _yPos -= 2.5;
+        _yPos -= 1 * speed;
     } else if (_currentDirection == 2 && !leftC) {
-        _xPos -= 2.5;
+        _xPos -= 1 * speed;
     } else if (_currentDirection == 3 && !downC) {
-        _yPos += 2.5;
+        _yPos += 1 * speed;
     } else if (_currentDirection == 4 && !rightC) {
-        _xPos += 2.5;
+        _xPos += 1 * speed;
     }
 
     rectangle(_xPos, _yPos, _color).draw();

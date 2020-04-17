@@ -11,4 +11,7 @@ C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(711,46
 C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(711,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(711,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(711,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  main.cpp
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\main.cpp(4,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
   Pac-Man.vcxproj -> C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Debug\Pac-Man.exe

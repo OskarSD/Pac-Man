@@ -32,13 +32,15 @@ public:
 	std::string getState() { return _state; }
 
 private:
-	std::string _state;
+	std::string _state = "dangerous";
 	int vulnerableCount = 600;
 
 	int animationCount = 0;
 	int blinkingCount = 0;
 	bool vulnerableSprite = false;
 	bool vulnerableEndingSprite = false;
+
+	float speed = 2.5;
 
 	float _xPos = 0;
 	float _yPos = 0;

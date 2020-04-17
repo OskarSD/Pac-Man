@@ -92,19 +92,19 @@ void Arena::createArena() {
 
 	// FULL HD 1080p
 
-	// MAP AREA
+	// MAP AREA 
 	rectangles.push_back(new Rectangle(750, 20, 75, 125, 0, 0, 255, 255));
 	rectangles.push_back(new Rectangle(770, 20, 75, 875, 0, 0, 255, 255)); // Width is different most likely because of map differences
 	
-	rectangles.push_back(new Rectangle(20, 350, 75, 125, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(20, 340, 75, 535, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(20, 20, 55, 455, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(20, 20, 55, 535, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(20, 349, 75, 125, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(20, 348, 75, 546, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(20, 20, 55, 454, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(20, 20, 55, 546, 0, 0, 255, 255));
 
-	rectangles.push_back(new Rectangle(20, 350, 825, 125, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(20, 340, 825, 535, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(20, 20, 845, 455, 0, 0, 255, 255));
-	rectangles.push_back(new Rectangle(20, 20, 845, 535, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(20, 349, 825, 125, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(20, 348, 825, 546, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(20, 20, 845, 454, 0, 0, 255, 255));
+	rectangles.push_back(new Rectangle(20, 20, 845, 546, 0, 0, 255, 255));
 	
 	// OBSTACLES (Everything writes from left corner->down/right)
 	/*	
@@ -592,8 +592,8 @@ void Arena::createArena() {
 
 	//-------------------- WARP POINTS --------------------//
 
-	warps.push_back(new Rectangle(20, 60, 55, 475, 0, 0, 0, 255));
-	warps.push_back(new Rectangle(20, 60, 845, 475, 0, 0, 0, 255));
+	warps.push_back(new Rectangle(20, 71, 55, 475, 255, 0, 0, 255));
+	warps.push_back(new Rectangle(20, 71, 845, 475, 255, 0, 0, 255));
 
 }
 
