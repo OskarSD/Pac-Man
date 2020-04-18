@@ -36,6 +36,9 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="text_sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arena.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pac_man.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="text_sprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

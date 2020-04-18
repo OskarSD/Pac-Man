@@ -592,8 +592,8 @@ void Arena::createArena() {
 
 	//-------------------- WARP POINTS --------------------//
 
-	warps.push_back(new Rectangle(20, 71, 55, 475, 255, 0, 0, 255));
-	warps.push_back(new Rectangle(20, 71, 845, 475, 255, 0, 0, 255));
+	warps.push_back(new Rectangle(20, 71, 55, 475, 0, 0, 0, 255));
+	warps.push_back(new Rectangle(20, 71, 845, 475, 0, 0, 0, 255));
 
 }
 

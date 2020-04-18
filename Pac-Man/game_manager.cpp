@@ -15,12 +15,8 @@ void Game_Manager::running() {
 
 	Pac_man pac_man(447, 640);
 
-	/*
-	Ghost inky("Inky", 397, 450);
-	Ghost pinky("Pinky", 497, 450);
-	Ghost clyde("Clyde", 397, 540);
-	Ghost blinky("Blinky", 497, 540);
-	*/
+	Text_sprite scoreText(50, 30);
+	Text_sprite score(270, 34);
 
 	ghosts.push_back(new Ghost("Inky", 397, 450));
 	ghosts.push_back(new Ghost("Pinky", 497, 450));
@@ -143,6 +139,10 @@ void Game_Manager::running() {
 		//checks if pac-man collides with a pill and then return points
 		arena.pillCollision(pac_man.getX(), pac_man.getY(), 32, 32);
 		points += arena.pillCollisionInfo();
+		std::string sPoints = std::to_string(points);
+
+		scoreText.drawText("score");
+		score.drawText(sPoints);
 
 		if (arena.noPills()) {
 			break;
@@ -169,7 +169,6 @@ void Game_Manager::running() {
 			arena.setActivePowerPill(false);
 
 		}
-
 
 		//presents everything drawn, with a black background
 		window.clear();

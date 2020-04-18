@@ -1,17 +1,13 @@
-﻿  arena.cpp
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(653,58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(653,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(653,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(653,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(666,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(666,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(666,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(666,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(711,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(711,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(711,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\arena.cpp(711,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  main.cpp
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\main.cpp(4,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+﻿  text_sprite.cpp
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\text_sprite.cpp(18,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\text_sprite.cpp(48,36): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\text_sprite.cpp(48,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\text_sprite.cpp(48,49): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\text_sprite.cpp(48,49): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\text_sprite.cpp(49,36): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\text_sprite.cpp(49,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\text_sprite.cpp(49,51): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\text_sprite.cpp(49,51): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\text_sprite.cpp(49,58): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\text_sprite.cpp(49,58): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   Pac-Man.vcxproj -> C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Debug\Pac-Man.exe

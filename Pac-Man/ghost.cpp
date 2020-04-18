@@ -16,8 +16,6 @@ Rectangle Ghost::rectangle(float x, float y, std::string color) {
 
 void Ghost::activeState() {
     
-    std::cout << vulnerableCount << std::endl;
-    
     if (_state == "vulnerable") {
 
         speed = 1.5;

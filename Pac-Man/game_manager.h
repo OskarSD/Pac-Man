@@ -6,6 +6,7 @@
 #include "pac_man.h"
 #include "arena.h"
 #include "ghost.h"
+#include "text_sprite.h"
 
 class Game_Manager {
 public:

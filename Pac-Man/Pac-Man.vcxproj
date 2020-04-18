@@ -144,6 +144,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pac_man.cpp" />
     <ClCompile Include="rectangle.cpp" />
+    <ClCompile Include="text_sprite.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +153,7 @@
     <ClInclude Include="ghost.h" />
     <ClInclude Include="pac_man.h" />
     <ClInclude Include="rectangle.h" />
+    <ClInclude Include="text_sprite.h" />
     <ClInclude Include="window.h" />
   </ItemGroup>
   <ItemGroup>
