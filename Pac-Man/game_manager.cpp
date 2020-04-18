@@ -15,8 +15,10 @@ void Game_Manager::running() {
 
 	Pac_man pac_man(447, 640);
 
-	Text_sprite scoreText(50, 30);
-	Text_sprite score(270, 34);
+	Life lives(600, 42, life);
+
+	Text_sprite scoreText(70, 30);
+	Text_sprite score(290, 34);
 
 	ghosts.push_back(new Ghost("Inky", 397, 450));
 	ghosts.push_back(new Ghost("Pinky", 497, 450));
@@ -25,7 +27,7 @@ void Game_Manager::running() {
 
 	arena.createArena();
 
-	while (!window.getClosed() && lives > 0) {
+	while (!window.getClosed() && life > 0) {
 
 		frameStart = SDL_GetTicks();
 
@@ -44,6 +46,8 @@ void Game_Manager::running() {
 
 		//draw warps
 		arena.drawWarps();
+
+		lives.drawLives(life - 1);
 
 		//change pac-man's position from right to left warping point
 		if (arena.warp(pac_man.getX(), pac_man.getY(), 32, 32) == 0) {
@@ -117,7 +121,7 @@ void Game_Manager::running() {
 				else if (ghosts[i]->getState() == "dangerous") {
 
 					//reduce life
-					lives--;
+					life--;
 
 					//resets positions
 					pac_man.setPosition(false, 447, 640);
@@ -141,6 +145,7 @@ void Game_Manager::running() {
 		points += arena.pillCollisionInfo();
 		std::string sPoints = std::to_string(points);
 
+		//drawing score
 		scoreText.drawText("score");
 		score.drawText(sPoints);
 

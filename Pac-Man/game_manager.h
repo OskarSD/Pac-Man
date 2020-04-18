@@ -7,6 +7,7 @@
 #include "arena.h"
 #include "ghost.h"
 #include "text_sprite.h"
+#include "life.h"
 
 class Game_Manager {
 public:
@@ -22,7 +23,7 @@ private:
 	std::vector<Ghost*> ghosts;
 
 	int points = 0;
-	int lives = 3;
+	int life = 3;
 
 };
 
