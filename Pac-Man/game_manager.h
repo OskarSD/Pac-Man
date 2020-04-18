@@ -7,6 +7,7 @@
 #include "arena.h"
 #include "ghost.h"
 #include "text_sprite.h"
+#include "audio.h"
 
 class Game_Manager {
 public:
@@ -23,6 +24,7 @@ private:
 
 	int points = 0;
 	int lives = 3;
+	audio soundEffect;
 
 };
 

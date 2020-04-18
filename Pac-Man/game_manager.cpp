@@ -3,6 +3,7 @@
 void Game_Manager::running() {
 
 	SDL_Init(SDL_INIT_VIDEO);
+	SDL_Init(SDL_INIT_AUDIO);
 
 	////UHD 1440p | Since type "int" risk calculation error, this has to be considered as potential hazard
 
