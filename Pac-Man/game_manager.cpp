@@ -66,12 +66,12 @@ void Game_Manager::running() {
 
 		//change pac-man's position from right to left warping point
 		if (arena.warp(pac_man.getX(), pac_man.getY(), 32, 32) == 0) {
-			pac_man.setPosition(true, 800, 490);
+			pac_man.setPosition(true, 800, pac_man.getY());
 		}
 
 		//change pac-man's position from right to left warping point
 		else if (arena.warp(pac_man.getX(), pac_man.getY(), 32, 32) == 1) {
-			pac_man.setPosition(true, 80, 490);
+			pac_man.setPosition(true, 80, pac_man.getY());
 		}
 
 		int i = 0;
@@ -80,12 +80,12 @@ void Game_Manager::running() {
 		for (auto Game_manager : ghosts) {
 			//change ghosts' position from right to left warping point
 			if (arena.warp(ghosts[i]->getX(), ghosts[i]->getY(), 32, 32) == 0) {
-				ghosts[i]->setPosition(true, 800, 490);
+				ghosts[i]->setPosition(true, 800, ghosts[i]->getY());
 			}
 
 			//change ghosts' position from right to left warping point
 			else if (arena.warp(ghosts[i]->getX(), ghosts[i]->getY(), 32, 32) == 1) {
-				ghosts[i]->setPosition(true, 80, 490);
+				ghosts[i]->setPosition(true, 80, ghosts[i]->getY());
 			}
 
 			i++;
