@@ -9,6 +9,7 @@
 #include "text_sprite.h"
 #include "audio.h"
 #include "life.h"
+#include "game_over.h"
 
 class Game_Manager {
 public:
@@ -16,6 +17,8 @@ public:
 	void pollEvents(Window& window, Pac_man& pac_man);
 
 private:
+	bool goodEnding = false;
+
 	const int fps = 60;
 	const int frameDelay = 1000 / fps;
 	int frameTime;
@@ -24,14 +27,13 @@ private:
 	std::vector<Ghost*> ghosts;
 
 	int points = 0;
-	
+
 	audio beginning;
-	audio chomp;
+	audio powerPill;
 	audio eatGhost;
 	audio death;
 	
 	int life = 3;
-
 
 };
 

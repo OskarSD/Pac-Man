@@ -12,6 +12,8 @@ void Game_Manager::running() {
 	//FULL HD 1080p
 	Window window("Pac-Man", 930, 950);
 
+	Game_over gm;
+
 	Arena arena;
 
 	Pac_man pac_man(447, 640);
@@ -29,9 +31,9 @@ void Game_Manager::running() {
 	arena.createArena();
 
 	beginning.load("sounds/pacman_beginning.wav");
-	chomp.load("sounds/pacman_chomp.wav");
+	powerPill.load("sounds/pacman_eatfruit.wav");
 	eatGhost.load("sounds/pacman_eatGhost.wav");
-	death.load("sound/pacman_death.wav");
+	death.load("sounds/pacman_death.wav");
 
 
 	beginning.play();
@@ -59,6 +61,7 @@ void Game_Manager::running() {
 		//draw warps
 		arena.drawWarps();
 
+		//draw lives
 		lives.drawLives(life - 1);
 
 		//change pac-man's position from right to left warping point
@@ -110,6 +113,8 @@ void Game_Manager::running() {
 
 					points += 200;
 
+					eatGhost.play();
+
 					switch (i) {
 					case 0:
 						ghosts[0]->setPosition(false, 397, 450);
@@ -135,6 +140,8 @@ void Game_Manager::running() {
 					//reduce life
 					life--;
 
+					death.play();
+
 					//resets positions
 					pac_man.setPosition(false, 447, 640);
 					ghosts[0]->setPosition(false, 397, 450);
@@ -154,6 +161,7 @@ void Game_Manager::running() {
 
 		//checks if pac-man collides with a pill and then return points
 		arena.pillCollision(pac_man.getX(), pac_man.getY(), 32, 32);
+
 		points += arena.pillCollisionInfo();
 		std::string sPoints = std::to_string(points);
 
@@ -162,6 +170,7 @@ void Game_Manager::running() {
 		score.drawText(sPoints);
 
 		if (arena.noPills()) {
+			goodEnding = true;
 			break;
 		}
 
@@ -172,6 +181,8 @@ void Game_Manager::running() {
 		//activate power pill and make ghosts vulnerable
 		if (arena.getActivePowerPill()) {
 			
+			powerPill.play();
+
 			int i = 0;
 
 			for (auto Game_manager : ghosts) {
@@ -196,11 +207,9 @@ void Game_Manager::running() {
 			SDL_Delay(frameDelay - frameTime);
 		}
 
-		if (pac_man.getDir() != 0) {
-
-			chomp.play();
-		}
 	}
+
+	gm.ending(goodEnding);
 
 }
 

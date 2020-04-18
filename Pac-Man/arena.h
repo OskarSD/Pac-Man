@@ -35,6 +35,8 @@ private:
 
 	bool _activePowerPill = false;
 
+	bool isPillCollision = false;
+
 };
 
 #endif
