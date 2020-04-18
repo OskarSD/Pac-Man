@@ -7,7 +7,11 @@
 #include "arena.h"
 #include "ghost.h"
 #include "text_sprite.h"
+<<<<<<< HEAD
 #include "audio.h"
+=======
+#include "life.h"
+>>>>>>> 09f01ed836f15140db3f6223a572715f91126583
 
 class Game_Manager {
 public:
@@ -23,8 +27,12 @@ private:
 	std::vector<Ghost*> ghosts;
 
 	int points = 0;
+<<<<<<< HEAD
 	int lives = 3;
 	audio soundEffect;
+=======
+	int life = 3;
+>>>>>>> 09f01ed836f15140db3f6223a572715f91126583
 
 };
 

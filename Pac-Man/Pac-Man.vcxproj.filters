@@ -39,7 +39,11 @@
     <ClCompile Include="text_sprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="audio.cpp">
+=======
+    <ClCompile Include="life.cpp">
+>>>>>>> 09f01ed836f15140db3f6223a572715f91126583
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,7 +69,11 @@
     <ClInclude Include="text_sprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="audio.h">
+=======
+    <ClInclude Include="life.h">
+>>>>>>> 09f01ed836f15140db3f6223a572715f91126583
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
