@@ -28,7 +28,17 @@ void Game_Manager::running() {
 
 	arena.createArena();
 
+	beginning.load("sounds/pacman_beginning.wav");
+	chomp.load("sounds/pacman_chomp.wav");
+	eatGhost.load("sounds/pacman_eatGhost.wav");
+	death.load("sound/pacman_death.wav");
+
+
+	beginning.play();
+
+
 	while (!window.getClosed() && life > 0) {
+
 
 		frameStart = SDL_GetTicks();
 
@@ -36,6 +46,7 @@ void Game_Manager::running() {
 		//input from user
 		pollEvents(window, pac_man);
 
+		
 		//draw arena with rectangles made within it
 		arena.drawArena();
 
@@ -185,6 +196,10 @@ void Game_Manager::running() {
 			SDL_Delay(frameDelay - frameTime);
 		}
 
+		if (pac_man.getDir() != 0) {
+
+			chomp.play();
+		}
 	}
 
 }

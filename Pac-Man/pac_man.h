@@ -17,6 +17,8 @@ public:
 	float getX() { return _xPos; }
 	float getY() { return _yPos; }
 
+	int getDir() { return _currentDirection; }
+
 private:
 	int _animationCount = 0;
 

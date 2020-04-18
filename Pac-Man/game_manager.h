@@ -25,7 +25,10 @@ private:
 
 	int points = 0;
 	
-	audio soundEffect;
+	audio beginning;
+	audio chomp;
+	audio eatGhost;
+	audio death;
 	
 	int life = 3;
 

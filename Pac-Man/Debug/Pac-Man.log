@@ -1,13 +1,10 @@
 ﻿  game_manager.cpp
-D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(82,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(82,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(89,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(89,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(145,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(145,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(158,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(158,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  main.cpp
-D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\main.cpp(4,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(93,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(93,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(100,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(100,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(156,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(156,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(169,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Pac-Man\game_manager.cpp(169,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Pac-Man.vcxproj -> D:\BIG CODE PROJECTS\Pac-man got cucked\Pac-Man\Debug\Pac-Man.exe
