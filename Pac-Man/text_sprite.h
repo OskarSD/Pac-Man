@@ -6,7 +6,7 @@
 class Text_sprite {
 public:
 	Text_sprite(float x, float y);
-	void drawText(std::string content);
+	void drawText(std::string content, double xs, double ys);
 
 private:
 	float _xPos = 0;

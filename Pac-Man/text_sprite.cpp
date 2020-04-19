@@ -13,7 +13,7 @@ Text_sprite::Text_sprite(float x, float y) {
 }
 
 //takes content and turns it into a sprite
-void Text_sprite::drawText(std::string content) {
+void Text_sprite::drawText(std::string content, double xs, double ys) {
 
     for (int i = 0; i < content.size(); i++) {
         
@@ -46,7 +46,7 @@ void Text_sprite::drawText(std::string content) {
         }
 
         SDL_Rect srcrect = { 38.46 * k, 46 * j, 38.46, 46 };
-        SDL_Rect dstrect = { _xPos + (38.46 * i), _yPos, 38.46, 46 };
+        SDL_Rect dstrect = { _xPos + (xs * i), _yPos, xs, ys };
 
         SDL_RenderCopy(Window::renderer, texture, &srcrect, &dstrect);
 

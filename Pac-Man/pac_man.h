@@ -14,12 +14,16 @@ public:
 
 	void setPosition(bool keepDirection, float x, float y);
 
+	bool close() { return _closed; }
+
 	float getX() { return _xPos; }
 	float getY() { return _yPos; }
 
 	int getDir() { return _currentDirection; }
 
 private:
+	bool _closed = false;
+
 	int _animationCount = 0;
 
 	float _xPos = 0;

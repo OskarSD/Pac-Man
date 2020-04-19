@@ -236,7 +236,9 @@ void Pac_man::pollEvents(SDL_Event& event) {
         case SDLK_RIGHT:
             _upcomingDirection = 4;
             break;
-
+        case SDLK_ESCAPE:
+            _closed = true;
+            break;
         }
 
     default:

@@ -9,7 +9,6 @@
 #include "text_sprite.h"
 #include "audio.h"
 #include "life.h"
-#include "game_over.h"
 
 class Game_Manager {
 public:
@@ -17,6 +16,7 @@ public:
 	void pollEvents(Window& window, Pac_man& pac_man);
 
 private:
+
 	bool goodEnding = false;
 
 	const int fps = 60;
@@ -28,10 +28,10 @@ private:
 
 	int points = 0;
 
-	audio beginning;
-	audio powerPill;
-	audio eatGhost;
-	audio death;
+	//audio beginning;
+	//audio powerPill;
+	//audio eatGhost;
+	//audio death;
 	
 	int life = 3;
 

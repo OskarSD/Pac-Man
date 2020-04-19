@@ -12,8 +12,6 @@ void Game_Manager::running() {
 	//FULL HD 1080p
 	Window window("Pac-Man", 930, 950);
 
-	Game_over gm;
-
 	Arena arena;
 
 	Pac_man pac_man(447, 640);
@@ -29,17 +27,17 @@ void Game_Manager::running() {
 	ghosts.push_back(new Ghost("Blinky", 497, 540));
 
 	arena.createArena();
-
+	/*
 	beginning.load("sounds/pacman_beginning.wav");
 	powerPill.load("sounds/pacman_eatfruit.wav");
 	eatGhost.load("sounds/pacman_eatGhost.wav");
 	death.load("sounds/pacman_death.wav");
+	*/
+
+		//beginning.play();
 
 
-	beginning.play();
-
-
-	while (!window.getClosed() && life > 0) {
+	while (!window.getClosed()) {
 
 
 		frameStart = SDL_GetTicks();
@@ -48,6 +46,9 @@ void Game_Manager::running() {
 		//input from user
 		pollEvents(window, pac_man);
 
+		if (pac_man.close()) {
+			break;
+		}
 		
 		//draw arena with rectangles made within it
 		arena.drawArena();
@@ -113,7 +114,7 @@ void Game_Manager::running() {
 
 					points += 200;
 
-					eatGhost.play();
+						//eatGhost.play();
 
 					switch (i) {
 					case 0:
@@ -140,7 +141,7 @@ void Game_Manager::running() {
 					//reduce life
 					life--;
 
-					death.play();
+						//death.play();
 
 					//resets positions
 					pac_man.setPosition(false, 447, 640);
@@ -166,13 +167,8 @@ void Game_Manager::running() {
 		std::string sPoints = std::to_string(points);
 
 		//drawing score
-		scoreText.drawText("score");
-		score.drawText(sPoints);
-
-		if (arena.noPills()) {
-			goodEnding = true;
-			break;
-		}
+		scoreText.drawText("score", 38, 46);
+		score.drawText(sPoints, 38, 46);
 
 		//checks if pac-man collides with a power pill and then return points
 		arena.powerPillCollision(pac_man.getX(), pac_man.getY(), 32, 32);
@@ -181,7 +177,7 @@ void Game_Manager::running() {
 		//activate power pill and make ghosts vulnerable
 		if (arena.getActivePowerPill()) {
 			
-			powerPill.play();
+				//powerPill.play();
 
 			int i = 0;
 
@@ -198,18 +194,71 @@ void Game_Manager::running() {
 
 		}
 
-		//presents everything drawn, with a black background
-		window.clear();
-
 		frameTime = SDL_GetTicks() - frameStart;
 
 		if (frameDelay > frameTime) {
 			SDL_Delay(frameDelay - frameTime);
 		}
 
+		if (arena.noPills()) {
+			goodEnding = true;
+			points += 500;
+			break;
+		} else if (!(life > 0)) {
+			goodEnding = false;
+			break;
+		}
+
+		//presents everything drawn
+		window.clear(0, 0, 0);
+
 	}
 
-	gm.ending(goodEnding);
+	Text_sprite gz(134, 70);
+	Text_sprite gameOver(90, 70);
+
+	Text_sprite goodfb1(256, 200);
+	Text_sprite goodfb2(400, 250);
+
+	Text_sprite badfb1(260, 200);
+	Text_sprite badfb2(296, 250);
+
+	//"If you get less than 1000 points, you don't deserve to have it nicely centered" - dev 2
+	Text_sprite goScoreText(362, 380);
+	Text_sprite goScore(380, 430);
+
+	Text_sprite exit(290, 800);
+
+	while (!window.getClosed()) {
+
+		//input from user
+		pollEvents(window, pac_man);
+
+		if (pac_man.close()) {
+			break;
+		}
+
+		if (goodEnding) {
+			gz.drawText("congrats", 80, 104);
+			goodfb1.drawText("you did well", 34, 44);
+			goodfb2.drawText("uwu", 34, 44);
+		}
+		
+		else if (!goodEnding) {
+			gameOver.drawText("game over", 80, 104);
+			badfb1.drawText("better luck", 34, 44);
+			badfb2.drawText("next time", 34, 44);
+		}
+
+		std::string sPoints = std::to_string(points);
+		goScoreText.drawText("score", 38, 46);
+		goScore.drawText(sPoints, 38, 46);
+		exit.drawText("press esc to exit", 20, 24);
+
+		//presents everything drawn
+		window.clear(0, 0, 0);
+
+	}
 
 }
 
@@ -220,4 +269,5 @@ void Game_Manager::pollEvents(Window& window, Pac_man& pac_man) {
 		pac_man.pollEvents(event);
 		window.pollEvents(event);
 	}
+
 }

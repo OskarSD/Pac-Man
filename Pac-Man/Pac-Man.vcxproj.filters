@@ -11,7 +11,6 @@
     <ClCompile Include="rectangle.cpp" />
     <ClCompile Include="text_sprite.cpp" />
     <ClCompile Include="window.cpp" />
-    <ClCompile Include="game_over.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arena.h" />
@@ -23,7 +22,6 @@
     <ClInclude Include="rectangle.h" />
     <ClInclude Include="text_sprite.h" />
     <ClInclude Include="window.h" />
-    <ClInclude Include="game_over.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

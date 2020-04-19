@@ -141,7 +141,6 @@
     <ClCompile Include="arena.cpp" />
     <ClCompile Include="audio.cpp" />
     <ClCompile Include="game_manager.cpp" />
-    <ClCompile Include="game_over.cpp" />
     <ClCompile Include="ghost.cpp" />
     <ClCompile Include="life.cpp" />
     <ClCompile Include="main.cpp" />
@@ -154,7 +153,6 @@
     <ClInclude Include="arena.h" />
     <ClInclude Include="audio.h" />
     <ClInclude Include="game_manager.h" />
-    <ClInclude Include="game_over.h" />
     <ClInclude Include="ghost.h" />
     <ClInclude Include="life.h" />
     <ClInclude Include="pac_man.h" />

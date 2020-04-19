@@ -1,10 +1,10 @@
 ﻿  game_manager.cpp
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(96,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(96,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(103,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(103,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(163,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(163,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(178,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(178,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(97,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(97,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(104,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(104,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(164,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(164,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(174,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Pac-Man\game_manager.cpp(174,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Pac-Man.vcxproj -> C:\Users\ostav\Documents\Visual Studio Projects\Pac-Man\Debug\Pac-Man.exe

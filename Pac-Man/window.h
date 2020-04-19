@@ -12,7 +12,7 @@ public:
 
 	void pollEvents(SDL_Event& event);
 
-	void clear() const;
+	void clear(int r, int g, int b) const;
 
 	inline bool getClosed() { return _closed; }
 
