@@ -28,10 +28,10 @@ private:
 
 	int points = 0;
 
-	//audio beginning;
-	//audio powerPill;
-	//audio eatGhost;
-	//audio death;
+	audio beginning;
+	audio powerPill;
+	audio eatGhost;
+	audio death;
 	
 	int life = 3;
 

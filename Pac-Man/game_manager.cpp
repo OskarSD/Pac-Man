@@ -5,11 +5,6 @@ void Game_Manager::running() {
 	SDL_Init(SDL_INIT_VIDEO);
 	SDL_Init(SDL_INIT_AUDIO);
 
-	////UHD 1440p | Since type "int" risk calculation error, this has to be considered as potential hazard
-
-	//Window window("Pac-Man", 950 * 1.5, 950 * 1.5);
-
-	//FULL HD 1080p
 	Window window("Pac-Man", 930, 950);
 
 	Arena arena;
@@ -27,14 +22,13 @@ void Game_Manager::running() {
 	ghosts.push_back(new Ghost("Blinky", 497, 540));
 
 	arena.createArena();
-	/*
+
 	beginning.load("sounds/pacman_beginning.wav");
 	powerPill.load("sounds/pacman_eatfruit.wav");
 	eatGhost.load("sounds/pacman_eatGhost.wav");
 	death.load("sounds/pacman_death.wav");
-	*/
 
-		//beginning.play();
+	beginning.play();
 
 
 	while (!window.getClosed()) {
@@ -114,7 +108,7 @@ void Game_Manager::running() {
 
 					points += 200;
 
-						//eatGhost.play();
+					eatGhost.play();
 
 					switch (i) {
 					case 0:
@@ -141,7 +135,7 @@ void Game_Manager::running() {
 					//reduce life
 					life--;
 
-						//death.play();
+					death.play();
 
 					//resets positions
 					pac_man.setPosition(false, 447, 640);
@@ -177,7 +171,7 @@ void Game_Manager::running() {
 		//activate power pill and make ghosts vulnerable
 		if (arena.getActivePowerPill()) {
 			
-				//powerPill.play();
+			powerPill.play();
 
 			int i = 0;
 

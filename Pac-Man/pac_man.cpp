@@ -156,7 +156,7 @@ void Pac_man::movement(int intCollision) {
             _currentDirection = 4;
         }
 
-        //up
+    //up
     } else if (_currentDirection == 1) {
 
         if (_upcomingDirection == 3) {
@@ -167,7 +167,7 @@ void Pac_man::movement(int intCollision) {
             _currentDirection = 4;
         }
 
-        //left
+    //left
     } else if (_currentDirection == 2) {
 
         if (_upcomingDirection == 4) {
@@ -178,7 +178,7 @@ void Pac_man::movement(int intCollision) {
             _currentDirection = 3;
         }
 
-        //down
+    //down
     } else if (_currentDirection == 3) {
 
         if (_upcomingDirection == 1) {
@@ -189,7 +189,7 @@ void Pac_man::movement(int intCollision) {
             _currentDirection = 4;
         }
 
-        //right
+    //right
     } else if (_currentDirection == 4) {
 
         if (_upcomingDirection == 2) {
